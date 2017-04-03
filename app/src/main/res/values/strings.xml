@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">YUPIVOYenrique</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Activity Quienes somos -->
+    <string name="quienes_somos_titulo">¿Quiénes somos?</string>
+    <string name="quienes_somos_parrafo">
+        Yupivoy surge como una opción para cotizar y reservar viajes de negocio o placer mediante un esquema de
+        formulario de viaje on-line, creada en 2014, especializados en reservación de hotelería y avión en todo el mundo.
+        \n\nBuscamos brindar un servicio que cubra las necesidades para tu próxima visita turística o de negocios
+        teniendo la alternativa a que elijas lo que mas te convenga mediante un formulario que nos permitirá buscar
+        y proporcionar el mejor escenario en precio a tu medida.
+        \n\nLa aceptación de un formulario nos ha brindado la experiencia de tener satisfechos a nuestros clientes con un
+        precio favorable debido a que buscamos los mejores rates de precio en hotelería y avión en un lapso de tiempo
+        de 24 hrs que es recompensada al momento en recibir la oferta.
+    </string>
+    <string name="cotizamos_texto">
+        Te cotizamos y reservamos con la tarifa más económica
+    </string>
+
+    <!-- Activity Porque elegir Yupivoy -->
+    <string name="porque_elegir_titulo">¿Por qué elegir Yupivoy?</string>
+    <string name="porque_elegir_parrafo">
+        Brinda un sistema amigable On line para llenar tus requerimiento de tu próximo viaje, con la garantía que en
+        24 horas recibirás una oferta adecuada a tus necesidades y presupuesto.
+        \n\nTe ofrecemos:
+        \nLa mejor tarifa comparada en el mercado.
+        \nFormas de pago adaptadas a tu necesidad.
+        \nCancelaciones Gratuitas en muchos de los casos.
+        \nExperiencia en el ramo turístico.
+        \nSistema interactivo amigable para reservaciones.
+        \n\nFormas de Pago:
+        \n1.- Por medio de transferencia electrónica mediante pago directo en una sola exhibición.
+        \n2.- Por depósito a cuenta bancaria mediante pagos a meses sin intereses.
+    </string>
+    <string name="recuerda_formulario_text">
+        Recuerda somos ¡Tu formulario de Viaje! Tu eliges que te conviene
+    </string>
+
+    <!-- Activity Contacto -->
+    <string name="contacto_titulo">Contacto</string>
+    <string name="contacto_nombre">Nombre</string>
+    <string name="contacto_correo">Correo</string>
+    <string name="contacto_telefono">Teléfono</string>
+    <string name="contacto_comentarios">Comentarios</string>
+    <string name="contacto_informacion_yupivoy">
+        MATRIZ
+        \n\nAve.Ricardo Margáin #575
+        \nEdificio C.
+        \nParque Corp. Sta. Engracia,
+        \nSan Pedro Garza García. N.L.
+        \nC.P. 66267
+        \nTurismo Reg. 04190190174
+
+        \n\nINFORMES
+
+        \n\nT. +52 (81) 8000.7412
+        \nF. +52 (81) 8000.7091
+        \nE. info@yupivoy.com
+        \nW. www.yupivoy.com
+    </string>
+    <string name="contacto_enviar_boton">ENVIAR</string>
+
+    <!-- Fonts -->
+    <string name="font_roboto_light">sans-serif-light</string>
+    <string name="font_roboto_medium">sans-serif-medium</string>
+    <string name="font_roboto_regular">sans-serif</string>
+    <string name="font_roboto_black">sans-serif-black</string>
+</resources>
