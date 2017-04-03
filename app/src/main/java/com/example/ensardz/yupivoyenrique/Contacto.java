@@ -9,7 +9,6 @@ public class Contacto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        this.getSupportActionBar().setTitle(R.string.contacto_titulo);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
     }

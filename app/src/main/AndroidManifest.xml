@@ -8,20 +8,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/MainPinkTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/MainPinkTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuienesSomos" />
-        <activity android:name=".PorqueElegir" />
-        <activity android:name=".Contacto"></activity>
+        <activity
+            android:name=".QuienesSomos"
+            android:label="@string/quienes_somos_titulo"
+            android:theme="@style/SecondaryPurpleTheme"
+            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity">
+        </activity>
+        <activity
+            android:name=".PorqueElegir"
+            android:label="@string/porque_elegir_titulo"
+            android:theme="@style/SecondaryPurpleTheme"
+            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity"/>
+        <activity
+            android:name=".Contacto"
+            android:label="@string/contacto_titulo"
+            android:theme="@style/SecondaryPurpleTheme"
+            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity">
+        </activity>
     </application>
 
 </manifest>

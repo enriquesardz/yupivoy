@@ -1,13 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="MainPinkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/yupiRosa</item>
+        <item name="colorPrimaryDark">@color/yupiRosaDark</item>
+        <item name="colorAccent">@color/yupiMorado</item>
         <item name="android:textViewStyle">@style/RobotoTextView</item>
         <item name="android:buttonStyle">@style/RobotoButton</item>
+    </style>
+
+    <style name="SecondaryPurpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/yupiMorado</item>
+        <item name="colorPrimaryDark">@color/yupiMoradoDark</item>
+        <item name="colorAccent">@color/yupiMorado</item>
+        <item name="android:textViewStyle">@style/RobotoTextView</item>
+        <item name="android:buttonStyle">@style/RobotoButton</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <!-- View Styles -->
@@ -21,7 +30,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="MainPinkTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
