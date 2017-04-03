@@ -16,18 +16,15 @@
         <item name="colorAccent">@color/yupiMorado</item>
         <item name="android:textViewStyle">@style/RobotoTextView</item>
         <item name="android:buttonStyle">@style/RobotoButton</item>
-        <item name="android:textSize">16sp</item>
     </style>
 
     <!-- View Styles -->
     <style name="RobotoTextView" parent="android:Widget.TextView">
         <item name="android:fontFamily">@string/font_roboto_regular</item>
-        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="RobotoButton" parent="android:Widget.Holo.Button">
         <item name="android:fontFamily">@string/font_roboto_medium</item>
-        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="MainPinkTheme.NoActionBar">

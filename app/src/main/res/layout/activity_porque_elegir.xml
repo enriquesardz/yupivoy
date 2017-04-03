@@ -14,6 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="17sp"
         android:text="@string/porque_elegir_parrafo"/>
 
     <TextView
@@ -22,10 +23,11 @@
         android:layout_marginTop="32dp"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:textStyle="italic|bold"
         android:text="@string/recuerda_formulario_text"/>
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:src="@drawable/ic_yupivoy_logo"

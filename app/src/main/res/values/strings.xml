@@ -6,6 +6,13 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- Strings del Drawer -->
+    <string name="drawer_inicio">Inicio</string>
+    <string name="drawer_quienes_somos">¿Quiénes somos?</string>
+    <string name="drawer_porque_elegir">¿Porqué elegir Yupivoy</string>
+    <string name="drawer_contacto">Contacto</string>
+    <string name="drawer_califica_aplicacion">Califica nuestra aplicacion</string>
+
     <!-- Activity Quienes somos -->
     <string name="quienes_somos_titulo">¿Quiénes somos?</string>
     <string name="quienes_somos_parrafo">
@@ -25,7 +32,7 @@
     <!-- Activity Porque elegir Yupivoy -->
     <string name="porque_elegir_titulo">¿Por qué elegir Yupivoy?</string>
     <string name="porque_elegir_parrafo">
-        Brinda un sistema amigable On line para llenar tus requerimiento de tu próximo viaje, con la garantía que en
+        Brinda un sistema amigable Online para llenar tus requerimiento de tu próximo viaje, con la garantía que en
         24 horas recibirás una oferta adecuada a tus necesidades y presupuesto.
         \n\nTe ofrecemos:
         \nLa mejor tarifa comparada en el mercado.
