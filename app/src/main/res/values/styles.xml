@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="MainPinkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <!-- Estilo primario para pantallas con palette yupirosa -->
         <item name="colorPrimary">@color/yupiRosa</item>
         <item name="colorPrimaryDark">@color/yupiRosaDark</item>
         <item name="colorAccent">@color/yupiMorado</item>
@@ -10,12 +10,32 @@
         <item name="android:buttonStyle">@style/RobotoButton</item>
     </style>
 
+    <!-- Estilo secundario para las pantallas con palette yupimorado -->
     <style name="SecondaryPurpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/yupiMorado</item>
         <item name="colorPrimaryDark">@color/yupiMoradoDark</item>
         <item name="colorAccent">@color/yupiMorado</item>
         <item name="android:textViewStyle">@style/RobotoTextView</item>
         <item name="android:buttonStyle">@style/RobotoButton</item>
+    </style>
+
+    <!-- CASOS ESPECIALES -->
+
+
+        <!-- Separador horizontal -->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+        <!-- Sub Titulos formularios -->
+    <style name="SubTituloFormulario">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">@color/yupiRosaDark</item>
     </style>
 
     <!-- View Styles -->
