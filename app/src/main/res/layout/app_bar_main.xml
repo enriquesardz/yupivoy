@@ -24,6 +24,11 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <include layout="@layout/fragment_formulario_hotel" />
+        <fragment
+            android:id="@+id/fragment_hotel_avion"
+            android:name="layout.FormularioHotelAvion"
+            android:layout="@layout/fragment_formulario_hotel_avion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

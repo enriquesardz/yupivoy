@@ -90,6 +90,7 @@
     <string name="frmlr_plan_habitacion">Plan de habitacion</string>
     <string name="frmlr_tipo_habitacion">Tipo de habitacion</string>
     <string name="frmlr_edad_ninos">Edad niños</string>
+
         <!-- Avion -->
     <string name="frmlr_ida_y_vuelta">Ida y vuelta (Redondo)</string>
     <string name="frmlr_ida_o_vuelta">Ida ó vuelta (Sencillo)</string>
@@ -100,6 +101,7 @@
     <string name="frmlr_bebes">Bebés (0-23 meses)</string>
     <string name="frmlr_seguro_vuelo">Seguro protección de vuelo</string>
     <string name="frmlr_vip_abordar">VIP - No filas - Primeros en abordar</string>
+
 
         <!-- Traslados -->
     <string name="frmlr_tipo_traslado">Tipo de traslado</string>
@@ -141,10 +143,12 @@
     <string name="frmlr_sub_hotel_especial">¿Algún hotel en especial?</string>
     <string name="frmlr_sub_fecha_hospedaje">Fecha de hospedaje</string>
     <string name="frmlr_sub_hospedan_habitacion">¿Cuántos se hospedan por habitación?</string>
+    <string name="frmlr_sub_alguna_preferencia_hotel">¿Tiene alguna preferencia de Hotel?</string>
         <!-- Avion -->
     <string name="frmlr_sub_donde_vas">¿A dónde vas?</string>
     <string name="frmlr_sub_cuando_salir">¿Cuándo quieres salir?</string>
     <string name="frmlr_sub_cuantos_viajan">¿Cuántos viajan?</string>
+    <string name="frmlr_sub_alguna_preferencia_avion">¿Tiene alguna preferencia de Avión?</string>
 
         <!-- Globales -->
     <string name="frmlr_sub_alguna_preferencia">¿Tiene alguna preferencia?</string>

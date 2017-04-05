@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.FormularioAutos">
+    tools:context="layout.FormularioTraslados">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -56,9 +56,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/frmlr_fecha_llegada"/>
-                    <CalendarView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"></CalendarView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha 1"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/frmlr_llegada_vuelo"/>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <Spinner
                             android:layout_width="0dp"
