@@ -136,6 +136,7 @@
     <string name="frmlr_ninos">Niños (2-11 años)</string>
     <string name="frmlr_transporte_aeropuerto_hotel">Transporte Aeropuerto-Hotel</string>
     <string name="frmlr_renta_de_carro">Renta de carro</string>
+    <string name="frmlr_seleccionar_fecha">Seleccionar fecha...</string>
 
     <!-- Strings de los subtitulos para los Formularios -->
         <!-- Hotel -->

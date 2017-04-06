@@ -77,12 +77,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/frmlr_fecha_entrada"/>
                     <EditText
-                        android:id="@+id/fecha_entrada"
+                        android:id="@+id/fecha_entrada_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/activity_horizontal_margin"
                         android:focusable="false"
-                        android:text="Fecha 1" />
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -93,11 +93,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/frmlr_fecha_salida"/>
-                    <TextView
+                    <EditText
+                        android:id="@+id/fecha_salida_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/activity_horizontal_margin"
-                        android:text="Fecha 2" />
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -110,6 +114,7 @@
                         android:layout_gravity="center"
                         android:text="@string/frmlr_noches"/>
                     <TextView
+                        android:id="@+id/noches_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

@@ -17,6 +17,7 @@ import com.example.ensardz.yupivoyenrique.R;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,7 +41,8 @@ public class FormularioHotelAvion extends Fragment {
 
 
     EditText fechaEntradaEditText;
-    Calendar myCalendar;
+    EditText fechaSalidaEditText;
+    TextView nochesTextView;
 
     public FormularioHotelAvion() {
         // Required empty public constructor
@@ -81,39 +83,15 @@ public class FormularioHotelAvion extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        Context mContext = getContext();
         View view = inflater.inflate(R.layout.fragment_formulario_hotel_avion, container, false);
-        fechaEntradaEditText = (EditText) view.findViewById(R.id.fecha_entrada);
+        fechaEntradaEditText = (EditText) view.findViewById(R.id.fecha_entrada_edittext);
+        fechaSalidaEditText = (EditText) view.findViewById(R.id.fecha_salida_edittext);
+        nochesTextView = (TextView)view.findViewById(R.id.noches_textview);
+        new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView,  mContext);
 
-        myCalendar = Calendar.getInstance();
-
-        final DatePickerDialog.OnDateSetListener fechaEntrada = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH, month);
-                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                actualizarFecha(); //Metodo actualizar fecha, cambia el contenido del textview
-            }
-        };
-
-        fechaEntradaEditText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new DatePickerDialog(getContext(), fechaEntrada,
-                        myCalendar .get(Calendar.YEAR),
-                        myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH))
-                        .show();
-            }
-        });
         return view;
 
-    }
-
-    private void actualizarFecha(){
-        String formatoFecha = "MM/dd/yy";
-        SimpleDateFormat sdf = new SimpleDateFormat(formatoFecha, Locale.US);
-        fechaEntradaEditText.setText(sdf.format(myCalendar.getTime()).toString());
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -155,7 +133,94 @@ public class FormularioHotelAvion extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-//    class SetDate implements View.OnFocusChangeListener, DatePickerDialog.OnDateSetListener{
-//        private
-//    }
+    static class FechaHospedaje implements View.OnClickListener, DatePickerDialog.OnDateSetListener{
+        private EditText editTextEntrada, editTextSalida;
+        private TextView nochesTextView;
+        private Calendar calendarioEntrada, calendarioSalida;
+        private Context context;
+        private DatePicker DPEntrada;
+        private DatePicker DPSalida;
+        private long msDiferencia;
+        private long nochesTotal;
+        /*TODO: No me gusta que la fecha inicial no regrese al dia actual... la segunda fecha tambien deberia
+        * de regresar a la fecha inicial, en caso de que se elige una fecha muy en futuro y quiera regresar al dia
+        * actual.
+        * */
+
+        public FechaHospedaje(EditText editTextEntrada, EditText editTextSalida, TextView nochesTextView, Context context){
+            this.editTextEntrada = editTextEntrada;
+            this.editTextSalida = editTextSalida;
+            this.nochesTextView = nochesTextView;
+            this.editTextEntrada.setOnClickListener(this);
+            this.editTextSalida.setOnClickListener(this);
+            this.context = context;
+            calendarioEntrada = Calendar.getInstance();
+            calendarioSalida = Calendar.getInstance();
+
+        }
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+            String formatoFecha = "MM/dd/yyyy";
+            SimpleDateFormat sdf = new SimpleDateFormat(formatoFecha, Locale.US);
+            if(view.equals(DPEntrada)){
+                calendarioEntrada.set(Calendar.YEAR, year);
+                calendarioEntrada.set(Calendar.MONTH, month);
+                calendarioEntrada.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                editTextEntrada.setText(sdf.format(calendarioEntrada.getTime()));
+                editTextSalida.setEnabled(true);
+            }
+            else if(view.equals(DPSalida)){
+                calendarioSalida.set(Calendar.YEAR, year);
+                calendarioSalida.set(Calendar.MONTH, month);
+                calendarioSalida.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                editTextSalida.setText(sdf.format(calendarioSalida.getTime()));
+                setNoches();
+                nochesTextView.setText(getNoches());
+            }
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            if(v.equals(editTextEntrada)) {
+                resetearValores();
+                DatePickerDialog datePickerDialogEntrada = new DatePickerDialog(context, this,
+                        calendarioEntrada.get(Calendar.YEAR),
+                        calendarioEntrada.get(Calendar.MONTH),
+                        calendarioEntrada.get(Calendar.DAY_OF_MONTH));
+                datePickerDialogEntrada.getDatePicker().setMinDate(System.currentTimeMillis());
+                DPEntrada = datePickerDialogEntrada.getDatePicker();
+                datePickerDialogEntrada.show();
+            }
+            else if (v.equals(editTextSalida)){
+                DatePickerDialog datePickerDialogSalida = new DatePickerDialog(context, this,
+                        calendarioSalida.get(Calendar.YEAR),
+                        calendarioSalida.get(Calendar.MONTH),
+                        calendarioSalida.get(Calendar.DAY_OF_MONTH)
+                );
+                datePickerDialogSalida.getDatePicker().setMinDate(calendarioEntrada.getTimeInMillis());
+                DPSalida = datePickerDialogSalida.getDatePicker();
+                datePickerDialogSalida.show();
+            }
+        }
+
+        private void setNoches(){
+            msDiferencia = calendarioSalida.getTimeInMillis() - calendarioEntrada.getTimeInMillis();
+            nochesTotal = TimeUnit.MILLISECONDS.toDays(msDiferencia);
+        }
+
+        public String getNoches(){
+            return String.valueOf(nochesTotal);
+        }
+
+        private void resetearValores(){
+            nochesTextView.setText("0");
+            editTextSalida.setText("");
+            editTextSalida.setEnabled(false);
+        }
+
+    }
 }
