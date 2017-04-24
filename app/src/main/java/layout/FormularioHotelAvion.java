@@ -3,8 +3,10 @@ package layout;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +14,14 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
 import com.example.ensardz.yupivoyenrique.R;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -28,6 +36,8 @@ import java.util.concurrent.TimeUnit;
  * create an instance of this fragment.
  */
 public class FormularioHotelAvion extends Fragment {
+
+    private static final String LOG = FormularioHotelAvion.class.getSimpleName();
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,6 +89,7 @@ public class FormularioHotelAvion extends Fragment {
 
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -90,9 +101,13 @@ public class FormularioHotelAvion extends Fragment {
         nochesTextView = (TextView)view.findViewById(R.id.noches_textview);
         new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView,  mContext);
 
+
+
         return view;
 
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -133,6 +148,10 @@ public class FormularioHotelAvion extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    //Esta clase recibe los edit text de las fechas de entrada y salida y el textview de noches para
+    //asegurar que el usuario eliga la fecha de entrada a partir de Hoy y no antes,
+    //que despues de elegir la fecha de entrada, solamente se pueda elegir las fechas posteriores
+    //como fecha de salida, despues se calculan las noches.
     static class FechaHospedaje implements View.OnClickListener, DatePickerDialog.OnDateSetListener{
         private EditText editTextEntrada, editTextSalida;
         private TextView nochesTextView;
@@ -142,6 +161,7 @@ public class FormularioHotelAvion extends Fragment {
         private DatePicker DPSalida;
         private long msDiferencia;
         private long nochesTotal;
+
         /*TODO: No me gusta que la fecha inicial no regrese al dia actual... la segunda fecha tambien deberia
         * de regresar a la fecha inicial, en caso de que se elige una fecha muy en futuro y quiera regresar al dia
         * actual.
