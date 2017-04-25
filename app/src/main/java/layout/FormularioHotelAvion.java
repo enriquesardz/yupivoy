@@ -25,6 +25,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -101,11 +102,10 @@ public class FormularioHotelAvion extends Fragment {
         nochesTextView = (TextView)view.findViewById(R.id.noches_textview);
         new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView,  mContext);
 
-
-
         return view;
 
     }
+
 
 
 

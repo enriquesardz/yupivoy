@@ -16,11 +16,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.URI;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
+
+import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by ensardz on 24/04/2017.
@@ -28,9 +33,10 @@ import java.util.List;
 
 public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterable{
 
+    private static final String LOG = BusquedaAutoCompleteAdapter.class.getSimpleName();
     private static final int MAX_RESULTADOS = 10;
     private Context mContext;
-    private List<BusquedaO> listaResultados = new ArrayList<BusquedaO>();
+    private List<ServicioO> listaServicios = new ArrayList<ServicioO>();
 
     //TODO: En el contstructor se debe pasar el tipo de busqueda que se realizara
     //EJ: Si es Hotel/Avion, Destino, Vuelo Salida/Entrada
@@ -40,12 +46,12 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
 
     @Override
     public int getCount() {
-        return listaResultados.size();
+        return listaServicios.size();
     }
 
     @Override
-    public BusquedaO getItem(int position) {
-        return listaResultados.get(position);
+    public ServicioO getItem(int position) {
+        return listaServicios.get(position);
     }
 
     @Override
@@ -67,77 +73,145 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
     //Este metodo le va a pasar a la clase BusquedaAsyncTask la palabra que se debe buscar
     @Override
     public Filter getFilter() {
-        return null;
+        Filter filter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults filterResults = new FilterResults();
+                if (constraint != null){
+
+                }
+                return null;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+            }
+        }
+        return filter;
     }
 
-    class BusquedaAsyncTask extends AsyncTask<Void, Void, String>{
+    //TODO: Revisar este metodo y terminarlo
+    private List<ServicioO> encontrarResultados(String palabraBuscada){
+        BusquedaAsyncTask busquedaAsyncTask = new BusquedaAsyncTask();
+        busquedaAsyncTask.execute(palabraBuscada);
+        return busquedaAsyncTask.getListaResultados();
+    }
 
+    //AsyncTask para crear el List con los resultados
+    class BusquedaAsyncTask extends AsyncTask<String, Void, String>{
+
+        private static final String TAG_RESULTADOS = "results";
+        private static final String TAG_LABEL = "Label";
         private String respuestaJSON;
+        private List<ServicioO> listaResultados = new ArrayList<ServicioO>();
 
         //Este metodo manda una peticion al web service
-        //se crea un string con la respusta, el JSON string se pasa/guarda para
+        //se crea un string con la respuesta, el JSON string se pasa/guarda para
         //manipularlo despues.
 
         @Override
-        protected String doInBackground(Void... params) {
-            //URL Prueba:
-            // http://ajax.e-tsw.com/searchservices/getSearchJson.aspx?callback=jQuery17208916521046776325_1429658910138&Lenguaje=ESP&ItemTypes=H:5,D:5&ItemTypesOrder=D&Filters=&PalabraBuscada=can&Af=undefined
-            //TODO: Terminar el URI builder
-            String urlPrueba = "http://ajax.e-tsw.com/searchservices/getSearchJson.aspx?callback=jQuery17208916521046776325_1429658910138&Lenguaje=ESP&ItemTypes=H:5,D:5&ItemTypesOrder=D&Filters=&PalabraBuscada=can&Af=undefined";
+        protected String doInBackground(String... params) {
+
+            String palabraBuscada = params[0];
             Uri.Builder builder = new Uri.Builder();
             builder.scheme("http")
-                    .authority("www.ajax.e-tsw.com")
-                    .appendPath("searchservies")
+                    .authority("ajax.e-tsw.com")
+                    .appendPath("searchservices")
                     .appendPath("getSearchJson.aspx")
                     .appendQueryParameter("callback", "jQuery17208916521046776325_1429658910138")
                     .appendQueryParameter("Lenguaje", "ESP")
                     .appendQueryParameter("ItemTypes", "D:5")
                     .appendQueryParameter("ItemTypesOrder", "D")
                     .appendQueryParameter("Filters", "")
-                    .appendQueryParameter("PalabraBuscada", "can")
+                    .appendQueryParameter("PalabraBuscada", palabraBuscada)
                     .appendQueryParameter("Af", "undefined");
 
+            InputStreamReader isr = null;
+            BufferedReader reader = null;
             try{
                 URL url = new URL(builder.build().toString());
+                Log.d(LOG + " Conexion a URL: ", url.toString());
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
 
                 String line = "";
-                InputStreamReader isr = new InputStreamReader(connection.getInputStream());
-                BufferedReader reader = new BufferedReader(isr);
+                isr = new InputStreamReader(connection.getInputStream());
+                reader = new BufferedReader(isr);
                 StringBuilder sb = new StringBuilder();
 
                 while ((line = reader.readLine()) != null){
                     sb.append(line + "\n");
                 }
 
-                respuestaJSON = sb.toString();
-
-                isr.close();
-                reader.close();
-
+                respuestaJSON = jsonCallbackToJson(sb.toString());
             }
             catch(IOException e){
-                Log.e("Error: " ,e.toString());
+                Log.e(LOG + " Error: " ,e.toString());
+                return null;
             }
-            Log.e("RESPUSTA: ", respuestaJSON);
-            return null;
+            finally {
+                try{
+                    if(isr != null){
+                        isr.close();
+                    }
+                    if (reader != null){
+                        reader.close();
+                    }
+                }
+                catch (IOException e){
+
+                }
+            }
+            Log.e(LOG+" RESPUSTA: ", respuestaJSON);
+
+            return respuestaJSON;
+        }
+
+        //Convierte el jsonCallback a un Json string que sea manipulable
+        public String jsonCallbackToJson(String jsonCallback){
+            String jsonString;
+            String nombreFuncion = null;
+            StringTokenizer st = new StringTokenizer(jsonCallback, "()");
+            while(st.hasMoreElements()){
+                nombreFuncion = st.nextToken();
+                break;
+            }
+            Log.e(LOG,nombreFuncion);
+            jsonString = jsonCallback.substring(nombreFuncion.length()+1, jsonCallback.length()-2);
+            return jsonString;
         }
 
         @Override
-        protected void onPostExecute(String resultado) {
-            super.onPostExecute(resultado);
+        protected void onPostExecute(String resultadoJSON) {
+            super.onPostExecute(resultadoJSON);
+            if(resultadoJSON == null){
+                Log.e(LOG +" Metodo onPostExecute: ", "Parametro null");
+            }
+
+            llenarListaResultados(resultadoJSON);
+        }
+
+        private void llenarListaResultados(String resultadoJSON){
+            try {
+                JSONObject objetoPrincipal = new JSONObject(resultadoJSON);
+                JSONArray arrayResultados = objetoPrincipal.getJSONArray(TAG_RESULTADOS);
+                for (int resultado=0; resultado < arrayResultados.length(); resultado++){
+                    JSONObject objetoResultado = arrayResultados.getJSONObject(resultado);
+                    String resultadoDescripcion = objetoResultado.getString(TAG_LABEL);
+                    listaResultados.add(new ServicioO(resultadoDescripcion));
+                }
+            }
+            catch(JSONException e){
+                Log.e(LOG , e.toString());
+            }
+        }
+
+        public List<ServicioO> getListaResultados(){
+            return this.listaResultados;
         }
     }
 }
 
-class BusquedaO{
-    String descripcion;
-    public BusquedaO(String descripcion){
-        this.descripcion = descripcion;
-    }
 
-    public String getDescripcion(){
-        return this.descripcion;
-    }
-}
+
