@@ -36,7 +36,7 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
     private static final String LOG = BusquedaAutoCompleteAdapter.class.getSimpleName();
     private static final int MAX_RESULTADOS = 10;
     private Context mContext;
-    private List<ServicioO> listaServicios = new ArrayList<ServicioO>();
+    private List<ServicioO> listaResultadoServicios = new ArrayList<ServicioO>();
 
     //TODO: En el contstructor se debe pasar el tipo de busqueda que se realizara
     //EJ: Si es Hotel/Avion, Destino, Vuelo Salida/Entrada
@@ -46,12 +46,12 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
 
     @Override
     public int getCount() {
-        return listaServicios.size();
+        return listaResultadoServicios.size();
     }
 
     @Override
     public ServicioO getItem(int position) {
-        return listaServicios.get(position);
+        return listaResultadoServicios.get(position);
     }
 
     @Override
@@ -73,21 +73,29 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
     //Este metodo le va a pasar a la clase BusquedaAsyncTask la palabra que se debe buscar
     @Override
     public Filter getFilter() {
-        Filter filter = new Filter() {
+        final Filter filter = new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 FilterResults filterResults = new FilterResults();
                 if (constraint != null){
+                    List<ServicioO> servicios = encontrarResultados(constraint.toString());
 
+                    filterResults.values = servicios;
+                    filterResults.count = servicios.size();
                 }
-                return null;
+                return filterResults;
             }
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-
+                if(results != null && results.count > 0){
+                    listaResultadoServicios = (List<ServicioO>) results.values;
+                    notifyDataSetChanged();
+                } else {
+                    notifyDataSetInvalidated();
+                }
             }
-        }
+        };
         return filter;
     }
 
