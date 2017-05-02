@@ -2,7 +2,6 @@ package com.example.ensardz.yupivoyenrique;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +39,8 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
 
     private static final String LOG = BusquedaAutoCompleteAdapter.class.getSimpleName();
     private static final int MAX_RESULTADOS = 5;
+    private static final String TAG_RESULTADOS = "results";
+    private static final String TAG_LABEL = "Label";
     private Context mContext;
     private List<ServicioO> listaResultadoServicios = new ArrayList<ServicioO>();
 
@@ -113,124 +114,213 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
 
     //TODO: Revisar este metodo y terminarlo
     private List<ServicioO> encontrarResultados(String palabraBuscada){
-        BusquedaAsyncTask busquedaAsyncTask = new BusquedaAsyncTask();
-        busquedaAsyncTask.execute(palabraBuscada);
-        return busquedaAsyncTask.getListaResultados();
+        List<ServicioO> listaResultados;
+        String JSONString = getJSONResponse(palabraBuscada);
+        listaResultados = llenarListaResultados(JSONString);
+
+        return listaResultados;
+    }
+
+    private String getJSONResponse(String palabraBuscada){
+
+        String respuestaJSON;
+
+        Uri.Builder builder = new Uri.Builder();
+        builder.scheme("http")
+                .authority("ajax.e-tsw.com")
+                .appendPath("searchservices")
+                .appendPath("getSearchJson.aspx")
+                .appendQueryParameter("callback", "jQuery17208916521046776325_1429658910138")
+                .appendQueryParameter("Lenguaje", "ESP")
+                .appendQueryParameter("ItemTypes", "D:" + MAX_RESULTADOS)
+                .appendQueryParameter("ItemTypesOrder", "D")
+                .appendQueryParameter("Filters", "")
+                .appendQueryParameter("PalabraBuscada", palabraBuscada)
+                .appendQueryParameter("Af", "undefined");
+
+        InputStreamReader isr = null;
+        BufferedReader reader = null;
+        try{
+            URL url = new URL(builder.build().toString());
+            Log.d(LOG + " Conexion a URL: ", url.toString());
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            String line = "";
+            isr = new InputStreamReader(connection.getInputStream());
+            reader = new BufferedReader(isr);
+            StringBuilder sb = new StringBuilder();
+
+            while ((line = reader.readLine()) != null){
+                sb.append(line + "\n");
+            }
+
+            respuestaJSON = jsonCallbackToJson(sb.toString());
+        }
+        catch(IOException e){
+            Log.e(LOG + " Error: " ,e.toString());
+            return null;
+        }
+        finally {
+            try{
+                if(isr != null){
+                    isr.close();
+                }
+                if (reader != null){
+                    reader.close();
+                }
+            }
+            catch (IOException e){
+
+            }
+        }
+        Log.e(LOG+" RESPUSTA: ", respuestaJSON);
+
+        return respuestaJSON;
+    }
+
+    //Convierte el jsonCallback a un Json string que sea manipulable
+    public String jsonCallbackToJson(String jsonCallback){
+        String jsonString;
+        String nombreFuncion = null;
+        StringTokenizer st = new StringTokenizer(jsonCallback, "()");
+        while(st.hasMoreElements()){
+            nombreFuncion = st.nextToken();
+            break;
+        }
+        Log.e(LOG,nombreFuncion);
+        jsonString = jsonCallback.substring(nombreFuncion.length()+1, jsonCallback.length()-2);
+        return jsonString;
+    }
+
+    private List<ServicioO> llenarListaResultados(String resultadoJSON){
+        List<ServicioO> listaResultados = new ArrayList<ServicioO>();
+        try {
+            JSONObject objetoPrincipal = new JSONObject(resultadoJSON);
+            JSONArray arrayResultados = objetoPrincipal.getJSONArray(TAG_RESULTADOS);
+            for (int resultado=0; resultado < arrayResultados.length(); resultado++){
+                JSONObject objetoResultado = arrayResultados.getJSONObject(resultado);
+                String resultadoDescripcion = objetoResultado.getString(TAG_LABEL);
+                listaResultados.add(new ServicioO(resultadoDescripcion));
+            }
+            return listaResultados;
+        }
+        catch(JSONException e){
+            Log.e(LOG , e.toString());
+        }
+        return listaResultados;
     }
 
     //AsyncTask para crear el List con los resultados
-    class BusquedaAsyncTask extends AsyncTask<String, Void, String>{
-
-        private static final String TAG_RESULTADOS = "results";
-        private static final String TAG_LABEL = "Label";
-        private String respuestaJSON;
-        private List<ServicioO> listaResultados = new ArrayList<ServicioO>();
-
-        //Este metodo manda una peticion al web service
-        //se crea un string con la respuesta, el JSON string se pasa/guarda para
-        //manipularlo despues.
-
-        @Override
-        protected String doInBackground(String... params) {
-
-            String palabraBuscada = params[0];
-            Uri.Builder builder = new Uri.Builder();
-            builder.scheme("http")
-                    .authority("ajax.e-tsw.com")
-                    .appendPath("searchservices")
-                    .appendPath("getSearchJson.aspx")
-                    .appendQueryParameter("callback", "jQuery17208916521046776325_1429658910138")
-                    .appendQueryParameter("Lenguaje", "ESP")
-                    .appendQueryParameter("ItemTypes", "D:" + MAX_RESULTADOS)
-                    .appendQueryParameter("ItemTypesOrder", "D")
-                    .appendQueryParameter("Filters", "")
-                    .appendQueryParameter("PalabraBuscada", palabraBuscada)
-                    .appendQueryParameter("Af", "undefined");
-
-            InputStreamReader isr = null;
-            BufferedReader reader = null;
-            try{
-                URL url = new URL(builder.build().toString());
-                Log.d(LOG + " Conexion a URL: ", url.toString());
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-
-                String line = "";
-                isr = new InputStreamReader(connection.getInputStream());
-                reader = new BufferedReader(isr);
-                StringBuilder sb = new StringBuilder();
-
-                while ((line = reader.readLine()) != null){
-                    sb.append(line + "\n");
-                }
-
-                respuestaJSON = jsonCallbackToJson(sb.toString());
-            }
-            catch(IOException e){
-                Log.e(LOG + " Error: " ,e.toString());
-                return null;
-            }
-            finally {
-                try{
-                    if(isr != null){
-                        isr.close();
-                    }
-                    if (reader != null){
-                        reader.close();
-                    }
-                }
-                catch (IOException e){
-
-                }
-            }
-            Log.e(LOG+" RESPUSTA: ", respuestaJSON);
-
-            return respuestaJSON;
-        }
-
-        //Convierte el jsonCallback a un Json string que sea manipulable
-        public String jsonCallbackToJson(String jsonCallback){
-            String jsonString;
-            String nombreFuncion = null;
-            StringTokenizer st = new StringTokenizer(jsonCallback, "()");
-            while(st.hasMoreElements()){
-                nombreFuncion = st.nextToken();
-                break;
-            }
-            Log.e(LOG,nombreFuncion);
-            jsonString = jsonCallback.substring(nombreFuncion.length()+1, jsonCallback.length()-2);
-            return jsonString;
-        }
-
-        @Override
-        protected void onPostExecute(String resultadoJSON) {
-            super.onPostExecute(resultadoJSON);
-            if(resultadoJSON == null){
-                Log.e(LOG +" Metodo onPostExecute: ", "Parametro null");
-            }
-
-            llenarListaResultados(resultadoJSON);
-        }
-
-        private void llenarListaResultados(String resultadoJSON){
-            try {
-                JSONObject objetoPrincipal = new JSONObject(resultadoJSON);
-                JSONArray arrayResultados = objetoPrincipal.getJSONArray(TAG_RESULTADOS);
-                for (int resultado=0; resultado < arrayResultados.length(); resultado++){
-                    JSONObject objetoResultado = arrayResultados.getJSONObject(resultado);
-                    String resultadoDescripcion = objetoResultado.getString(TAG_LABEL);
-                    listaResultados.add(new ServicioO(resultadoDescripcion));
-                }
-            }
-            catch(JSONException e){
-                Log.e(LOG , e.toString());
-            }
-        }
-
-        public List<ServicioO> getListaResultados(){
-            return this.listaResultados;
-        }
-    }
+//    class BusquedaAsyncTask extends AsyncTask<String, Void, String>{
+//
+//        private static final String TAG_RESULTADOS = "results";
+//        private static final String TAG_LABEL = "Label";
+//        private String respuestaJSON;
+//        private List<ServicioO> listaResultados = new ArrayList<ServicioO>();
+//
+//        //Este metodo manda una peticion al web service
+//        //se crea un string con la respuesta, el JSON string se pasa/guarda para
+//        //manipularlo despues.
+//
+//        @Override
+//        protected String doInBackground(String... params) {
+//
+//            String palabraBuscada = params[0];
+//            Uri.Builder builder = new Uri.Builder();
+//            builder.scheme("http")
+//                    .authority("ajax.e-tsw.com")
+//                    .appendPath("searchservices")
+//                    .appendPath("getSearchJson.aspx")
+//                    .appendQueryParameter("callback", "jQuery17208916521046776325_1429658910138")
+//                    .appendQueryParameter("Lenguaje", "ESP")
+//                    .appendQueryParameter("ItemTypes", "D:" + MAX_RESULTADOS)
+//                    .appendQueryParameter("ItemTypesOrder", "D")
+//                    .appendQueryParameter("Filters", "")
+//                    .appendQueryParameter("PalabraBuscada", palabraBuscada)
+//                    .appendQueryParameter("Af", "undefined");
+//
+//            InputStreamReader isr = null;
+//            BufferedReader reader = null;
+//            try{
+//                URL url = new URL(builder.build().toString());
+//                Log.d(LOG + " Conexion a URL: ", url.toString());
+//                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                connection.setRequestMethod("GET");
+//
+//                String line = "";
+//                isr = new InputStreamReader(connection.getInputStream());
+//                reader = new BufferedReader(isr);
+//                StringBuilder sb = new StringBuilder();
+//
+//                while ((line = reader.readLine()) != null){
+//                    sb.append(line + "\n");
+//                }
+//
+//                respuestaJSON = jsonCallbackToJson(sb.toString());
+//            }
+//            catch(IOException e){
+//                Log.e(LOG + " Error: " ,e.toString());
+//                return null;
+//            }
+//            finally {
+//                try{
+//                    if(isr != null){
+//                        isr.close();
+//                    }
+//                    if (reader != null){
+//                        reader.close();
+//                    }
+//                }
+//                catch (IOException e){
+//
+//                }
+//            }
+//            Log.e(LOG+" RESPUSTA: ", respuestaJSON);
+//
+//            return respuestaJSON;
+//        }
+//
+//        //Convierte el jsonCallback a un Json string que sea manipulable
+//        public String jsonCallbackToJson(String jsonCallback){
+//            String jsonString;
+//            String nombreFuncion = null;
+//            StringTokenizer st = new StringTokenizer(jsonCallback, "()");
+//            while(st.hasMoreElements()){
+//                nombreFuncion = st.nextToken();
+//                break;
+//            }
+//            Log.e(LOG,nombreFuncion);
+//            jsonString = jsonCallback.substring(nombreFuncion.length()+1, jsonCallback.length()-2);
+//            return jsonString;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(String resultadoJSON) {
+//            super.onPostExecute(resultadoJSON);
+//            if(resultadoJSON == null){
+//                Log.e(LOG +" Metodo onPostExecute: ", "Parametro null");
+//            }
+//
+//            llenarListaResultados(resultadoJSON);
+//        }
+//
+//        private void llenarListaResultados(String resultadoJSON){
+//            try {
+//                JSONObject objetoPrincipal = new JSONObject(resultadoJSON);
+//                JSONArray arrayResultados = objetoPrincipal.getJSONArray(TAG_RESULTADOS);
+//                for (int resultado=0; resultado < arrayResultados.length(); resultado++){
+//                    JSONObject objetoResultado = arrayResultados.getJSONObject(resultado);
+//                    String resultadoDescripcion = objetoResultado.getString(TAG_LABEL);
+//                    listaResultados.add(new ServicioO(resultadoDescripcion));
+//                }
+//            }
+//            catch(JSONException e){
+//                Log.e(LOG , e.toString());
+//            }
+//        }
+//
+//    }
 }
 
 

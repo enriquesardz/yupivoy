@@ -69,11 +69,19 @@ public class FormularioHotelAvion extends Fragment {
 
         destinoAutoComplete.setLoadingIndicator((ProgressBar)view.findViewById(R.id.destino_indicador_carga));
 
+//        destinoAutoComplete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                destinoAutoComplete.setText("");
+//            }
+//        });
+
         destinoAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ServicioO servicio = (ServicioO) parent.getItemAtPosition(position);
                 destinoAutoComplete.setText(servicio.getDescripcion());
+                destinoAutoComplete.setSelected(false);
             }
         });
 
