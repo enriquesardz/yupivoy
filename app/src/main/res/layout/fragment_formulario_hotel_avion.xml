@@ -49,8 +49,10 @@
                     android:id="@+id/destino_datv"
                     android:layout_weight="1"
                     android:hint="@string/frmlr_destino"
+                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:imeOptions="flagNoExtractUi|actionSearch"/>
                 <ProgressBar
                     android:id="@+id/destino_indicador_carga"
                     style="?android:attr/progressBarStyleSmall"

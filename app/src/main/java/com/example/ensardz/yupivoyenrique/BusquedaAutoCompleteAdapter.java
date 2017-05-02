@@ -12,6 +12,12 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,25 +27,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 /**
  * Created by ensardz on 24/04/2017.
+ *
+ * Esta clase es un adaptador que debera de ser utilizado para los AutoCompleteTextView que
+ * quieran mostrar sugerencias de Destinos, Hoteles/Destinos, Vuelos, etcetera.
+ *
+ * Ademas implementa Filterable para poder
  */
 
 public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterable{
 
     private static final String LOG = BusquedaAutoCompleteAdapter.class.getSimpleName();
-    private static final int MAX_RESULTADOS = 10;
+    private static final int MAX_RESULTADOS = 5;
     private Context mContext;
     private List<ServicioO> listaResultadoServicios = new ArrayList<ServicioO>();
 
     //TODO: En el contstructor se debe pasar el tipo de busqueda que se realizara
+
     //EJ: Si es Hotel/Avion, Destino, Vuelo Salida/Entrada
+
+    //Esto se hace para que est misma clase pueda llenar el AutoCompleteTextView independientemente de si
+    //la peticion pida 1 servicio o 2 servicios.
     public BusquedaAutoCompleteAdapter(Context context){
         mContext = context;
     }
@@ -62,11 +71,14 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
+            Log.d(LOG, "Se infla la view...");
             LayoutInflater inflater = (LayoutInflater) mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.busqueda_fila_listitem, parent, false);
         }
+        Log.d(LOG, "La view fue inflada o ya existia, se llena de info...");
         ((TextView)convertView.findViewById(R.id.busqueda_list_item_textview1)).setText(getItem(position).getDescripcion());
+        Log.d(LOG, "Se lleno de info...");
         return convertView;
     }
 
@@ -129,7 +141,7 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
                     .appendPath("getSearchJson.aspx")
                     .appendQueryParameter("callback", "jQuery17208916521046776325_1429658910138")
                     .appendQueryParameter("Lenguaje", "ESP")
-                    .appendQueryParameter("ItemTypes", "D:5")
+                    .appendQueryParameter("ItemTypes", "D:" + MAX_RESULTADOS)
                     .appendQueryParameter("ItemTypesOrder", "D")
                     .appendQueryParameter("Filters", "")
                     .appendQueryParameter("PalabraBuscada", palabraBuscada)
