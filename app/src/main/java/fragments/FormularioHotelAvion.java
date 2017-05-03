@@ -1,4 +1,4 @@
-package layout;
+package fragments;
 
 import android.app.DatePickerDialog;
 import android.content.Context;

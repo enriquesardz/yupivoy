@@ -8,4 +8,10 @@
     <color name="yupiRosaDark">#F8004F</color>
     <color name="yupiMorado">#7E00AA</color>
     <color name="yupiMoradoDark">#650089</color>
+
+    <!-- Tonos negros -->
+    <color name="negro_87">#575757</color>
+
+    <!-- Tonos blancos -->
+    <color name="blanco">#ffffff</color>
 </resources>

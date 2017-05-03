@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ensardz.yupivoyenrique">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,20 +24,19 @@
         <activity
             android:name=".QuienesSomos"
             android:label="@string/quienes_somos_titulo"
-            android:theme="@style/SecondaryPurpleTheme"
-            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SecondaryPurpleTheme"></activity>
         <activity
             android:name=".PorqueElegir"
             android:label="@string/porque_elegir_titulo"
-            android:theme="@style/SecondaryPurpleTheme"
-            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SecondaryPurpleTheme" />
         <activity
             android:name=".Contacto"
             android:label="@string/contacto_titulo"
-            android:theme="@style/SecondaryPurpleTheme"
-            android:parentActivityName="com.example.ensardz.yupivoyenrique.MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SecondaryPurpleTheme"></activity>
+        <activity android:name=".FormulariosContainer"></activity>
     </application>
 
 </manifest>

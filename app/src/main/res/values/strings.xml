@@ -13,6 +13,12 @@
     <string name="drawer_contacto">Contacto</string>
     <string name="drawer_califica_aplicacion">Califica nuestra aplicacion</string>
 
+    <!-- Menu principal -->
+    <string name="mp_cotiza_tu_viaje">Cotiza tu viaje con nosotros.</string>
+    <string name="mp_hotel">Hotel</string>
+    <string name="mp_avion">Avión</string>
+    <string name="mp_hotel_avion">Hotel + Avión</string>
+
     <!-- Activity Quienes somos -->
     <string name="quienes_somos_titulo">¿Quiénes somos?</string>
     <string name="quienes_somos_parrafo">
@@ -81,9 +87,9 @@
     <string name="frmlr_titulo_hotel_avion">Hotel - Avión</string>
     <string name="frmlr_titulo_traslados">Traslados</string>
     <string name="frmlr_titulo_autos">Autos</string>
-    
+
     <!-- Strings para los Formularios -->
-        <!-- Hotel -->
+    <!-- Hotel -->
     <string name="frmlr_presupuesto">Presupuesto</string>
     <string name="frmlr_hotel">Hotel</string>
     <string name="frmlr_tipo_hotel">Tipo de hotel</string>
@@ -91,7 +97,7 @@
     <string name="frmlr_tipo_habitacion">Tipo de habitacion</string>
     <string name="frmlr_edad_ninos">Edad niños</string>
 
-        <!-- Avion -->
+    <!-- Avion -->
     <string name="frmlr_ida_y_vuelta">Ida y vuelta (Redondo)</string>
     <string name="frmlr_ida_o_vuelta">Ida ó vuelta (Sencillo)</string>
     <string name="frmlr_aeropuerto_salida">Aeropuerto de Salida</string>
@@ -103,7 +109,7 @@
     <string name="frmlr_vip_abordar">VIP - No filas - Primeros en abordar</string>
 
 
-        <!-- Traslados -->
+    <!-- Traslados -->
     <string name="frmlr_tipo_traslado">Tipo de traslado</string>
     <string name="frmlr_aeropuerto_llegada">Aeropuerto de llegada</string>
     <string name="frmlr_zona_llegada">Zona de llegada</string>
@@ -115,7 +121,7 @@
     <string name="frmlr_fecha_vuelta">Fecha de vuelta</string>
     <string name="frmlr_salida_vuelo">Salida vuelo (vuelta)</string>
 
-        <!-- Autos -->
+    <!-- Autos -->
     <string name="frmlr_pais">Pais</string>
     <string name="frmlr_ciudad">Ciudad</string>
     <string name="frmlr_lugar">Lugar</string>
@@ -125,7 +131,7 @@
     <string name="frmlr_edad_conductor">Edad del conductor</string>
     <string name="frmlr_edad_entre">¿Entre 25 y 70?</string>
 
-        <!-- Globales -->
+    <!-- Globales -->
     <string name="frmlr_modo_pago">Modo de pago</string>
     <string name="frmlr_destino">Destino</string>
     <string name="frmlr_fecha_entrada">Fecha de entrada</string>
@@ -139,27 +145,32 @@
     <string name="frmlr_seleccionar_fecha">Seleccionar fecha...</string>
 
     <!-- Strings de los subtitulos para los Formularios -->
-        <!-- Hotel -->
+    <!-- Hotel -->
     <string name="frmlr_sub_donde_quieres_ir">¿A dónde quieres ir?</string>
     <string name="frmlr_sub_hotel_especial">¿Algún hotel en especial?</string>
     <string name="frmlr_sub_fecha_hospedaje">Fecha de hospedaje</string>
     <string name="frmlr_sub_hospedan_habitacion">¿Cuántos se hospedan por habitación?</string>
     <string name="frmlr_sub_alguna_preferencia_hotel">¿Tiene alguna preferencia de Hotel?</string>
-        <!-- Avion -->
+    <!-- Avion -->
     <string name="frmlr_sub_donde_vas">¿A dónde vas?</string>
     <string name="frmlr_sub_cuando_salir">¿Cuándo quieres salir?</string>
     <string name="frmlr_sub_cuantos_viajan">¿Cuántos viajan?</string>
     <string name="frmlr_sub_alguna_preferencia_avion">¿Tiene alguna preferencia de Avión?</string>
 
-        <!-- Globales -->
+    <!-- Globales -->
     <string name="frmlr_sub_alguna_preferencia">¿Tiene alguna preferencia?</string>
     <string name="frmlr_sub_opcion_especial">¿Algúna opción especial?</string>
     <string name="frmlr_sub_comentarios">Comentarios</string>
 
     <!-- Fonts -->
-    <string name="font_roboto_light">sans-serif-light</string>
-    <string name="font_roboto_medium">sans-serif-medium</string>
     <string name="font_roboto_regular">sans-serif</string>
+    <string name="font_roboto_light">sans-serif-light</string>
+    <string name="font_roboto_condensed">sans-serif-condensed</string>
     <string name="font_roboto_black">sans-serif-black</string>
+    <string name="font_roboto_thin">sans-serif-thin</string>
+    <string name="font_roboto_medium">sans-serif-medium</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
