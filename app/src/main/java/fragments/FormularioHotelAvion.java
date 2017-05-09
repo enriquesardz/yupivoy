@@ -17,6 +17,7 @@ import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
 import com.example.ensardz.yupivoyenrique.R;
 import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
 import com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView;
+import com.example.ensardz.yupivoyenrique.utilidad.UtilidadFormularios;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -65,23 +66,22 @@ public class FormularioHotelAvion extends Fragment {
         final DelayAutoCompleteTextView destinoAutoComplete = (DelayAutoCompleteTextView) view.findViewById(R.id.destino_datv);
 
         destinoAutoComplete.setThreshold(THRESHOLD);
-        destinoAutoComplete.setAdapter(new BusquedaAutoCompleteAdapter(mContext));
+        destinoAutoComplete.setAdapter(new BusquedaAutoCompleteAdapter(mContext, UtilidadFormularios.TIPO_SERVICIO_HOTEL_DESTINO_CIUDAD));
 
         destinoAutoComplete.setLoadingIndicator((ProgressBar)view.findViewById(R.id.destino_indicador_carga));
 
-//        destinoAutoComplete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                destinoAutoComplete.setText("");
-//            }
-//        });
+        destinoAutoComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                destinoAutoComplete.setText("");
+            }
+        });
 
         destinoAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ServicioO servicio = (ServicioO) parent.getItemAtPosition(position);
                 destinoAutoComplete.setText(servicio.getDescripcion());
-                destinoAutoComplete.setSelected(false);
             }
         });
 
