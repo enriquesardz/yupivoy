@@ -1,6 +1,7 @@
 package com.example.ensardz.yupivoyenrique;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -41,6 +42,7 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
     private static final String LOG = BusquedaAutoCompleteAdapter.class.getSimpleName();
     private static final String TAG_RESULTADOS = "results";
     private static final String TAG_LABEL = "Label";
+    private static final String TAG_TIPO = "Type";
     private Context mContext;
     private String mTipoServicio;
     private List<ServicioO> listaResultadoServicios = new ArrayList<ServicioO>();
@@ -78,7 +80,24 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.busqueda_fila_listitem, parent, false);
         }
-        ((TextView)convertView.findViewById(R.id.busqueda_list_item_textview1)).setText(getItem(position).getDescripcion());
+        String tipoServicio = getItem(position).getTipoServicio();
+        TextView listItem = (TextView)convertView.findViewById(R.id.busqueda_list_item_textview1);
+        listItem.setText(getItem(position).getDescripcion());
+        switch (tipoServicio){
+            //TODO: AGREGAR VUELO SALIDA Y VUELO LLEGADA
+            case UtilidadFormularios.ID_SERVICIO_DESTINO:
+                listItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_list_icon_destino,0,0,0);
+                break;
+            case UtilidadFormularios.ID_SERVICIO_CIUDAD:
+                listItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_list_icon_ciudad,0,0,0);
+                break;
+            case UtilidadFormularios.ID_SERVICIO_HOTEL:
+                listItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_list_icon_hotel,0,0,0);
+                break;
+            default:
+                listItem.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0); //O cambiar por imagen default
+                break;
+        }
         return convertView;
     }
 
@@ -222,7 +241,8 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
             for (int resultado=0; resultado < arrayResultados.length(); resultado++){
                 JSONObject objetoResultado = arrayResultados.getJSONObject(resultado);
                 String resultadoDescripcion = objetoResultado.getString(TAG_LABEL);
-                listaResultados.add(new ServicioO(resultadoDescripcion));
+                String tipoServicio = objetoResultado.getString(TAG_TIPO);
+                listaResultados.add(new ServicioO(resultadoDescripcion, tipoServicio));
             }
             return listaResultados;
         }

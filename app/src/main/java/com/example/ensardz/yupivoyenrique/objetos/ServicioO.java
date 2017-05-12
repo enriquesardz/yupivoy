@@ -11,10 +11,13 @@ package com.example.ensardz.yupivoyenrique.objetos;
 
 public class ServicioO {
     String descripcion;
-    public ServicioO(String descripcion){
+    String tipoServicio;
+    public ServicioO(String descripcion, String tipoServicio){
         this.descripcion = descripcion;
+        this.tipoServicio = tipoServicio;
     }
     public String getDescripcion(){
         return this.descripcion;
     }
+    public String getTipoServicio(){return this.tipoServicio;}
 }

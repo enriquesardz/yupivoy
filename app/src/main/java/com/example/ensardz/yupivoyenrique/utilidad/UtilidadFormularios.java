@@ -8,6 +8,14 @@ public class UtilidadFormularios {
     //Numero de resultados que regresa el request al web service
     public static final String MAX_RESULTADO_SERVICIOS = "5";
 
+    //El "ID" que se utiliza en el web service para identificar el tipo de servicio que es
+    //Estos identificadores se utilizan especificamente para identificar el servicio y utilizar la imagen adecuada.
+    public static final String ID_SERVICIO_HOTEL = "H";
+    public static final String ID_SERVICIO_DESTINO = "D";
+    public static final String ID_SERVICIO_CIUDAD = "C";
+    public static final String ID_SERVICIO_VUELO_LLEGADA= "A";
+    public static final String ID_SERVICIO_VUELO_SALIDA = "P";
+
     //Tipo de servicio que se le va a pedir al web service
     public static final String TIPO_SERVICIO_HOTEL = "H:" + MAX_RESULTADO_SERVICIOS; //EJ= H:10
     public static final String TIPO_SERVICIO_DESTINO = "D:" + MAX_RESULTADO_SERVICIOS;
