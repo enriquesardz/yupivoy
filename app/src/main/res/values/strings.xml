@@ -146,6 +146,7 @@
 
     <!-- Sring arrays para los spinners de: Hotel y Avion -->
     <string-array name="frmlr_hotel_avion_presupuesto_spinner_array">
+        <item>Seleccionar</item>
         <item>$10,000 a $15,000</item>
         <item>$15,000 a $20,000</item>
         <item>$20,000 a $30,000</item>
@@ -155,6 +156,49 @@
         <item>$100,000 a $200,000</item>
     </string-array>
 
+    <string-array name="frmlr_hotel_avion_modo_pago_spinner_array">
+        <item>Seleccionar</item>
+        <item>Efectivo</item>
+        <item>Tarjeta de credito</item>
+    </string-array>
+
+    <string-array name="frmlr_hotel_avion_tipo_hotel_array">
+        <item>Seleccionar</item>
+        <item>Sólo adultos</item>
+        <item>Familiar</item>
+    </string-array>
+
+    <string-array name="frmlr_hotel_avion_plan_habitacion_array">
+        <item>Seleccionar</item>
+        <item>Todo incluído</item>
+        <item>Sólo Desayuno</item>
+        <item>Sólo Hospedaje</item>
+        <item>Cocineta</item>
+        <item>Servicio al cuarto</item>
+    </string-array>
+
+    <string-array name="frmlr_hotel_avion_tipo_habitacion_array">
+        <item>Seleccionar</item>
+        <item>Estándar</item>
+        <item>Vista al mar</item>
+    </string-array>
+
+    <string-array name="frmlr_hotel_avion_clase_avion_array">
+        <item>Seleccionar</item>
+        <item>Cualquiera</item>
+        <item>Económica</item>
+        <item>Primera Clase</item>
+    </string-array>
+
+    <string-array name="frmlr_hotel_avion_compañia_aerea_array">
+        <item>Seleccionar</item>
+        <item>Cualquiera</item>
+        <item>Viva Aerobus</item>
+        <item>Volaris</item>
+        <item>Interjet</item>
+        <item>Magnicharters</item>
+        <item>Aeroméxico</item>
+    </string-array>
     <!-- Strings de los subtitulos para los Formularios -->
     <!-- Hotel -->
     <string name="frmlr_sub_donde_quieres_ir">¿A dónde quieres ir?</string>

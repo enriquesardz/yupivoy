@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_modo_pago"/>
             <Spinner
+                android:id="@+id/modo_pago_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </Spinner>
@@ -150,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_tipo_hotel"/>
             <Spinner
+                android:id="@+id/tipo_hotel_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
             <TextView
@@ -157,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_plan_habitacion"/>
             <Spinner
+                android:id="@+id/plan_habitacion_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
             <TextView
@@ -164,6 +167,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_tipo_habitacion"/>
             <Spinner
+                android:id="@+id/tipo_habitacion_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
             <TextView style="@style/SubTituloFormulario"
@@ -173,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_clase"/>
             <Spinner
+                android:id="@+id/clase_avion_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
             <TextView
@@ -180,6 +185,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_compania_aerea"/>
             <Spinner
+                android:id="@+id/compania_aerea_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
             <TextView style="@style/SubTituloFormulario"
