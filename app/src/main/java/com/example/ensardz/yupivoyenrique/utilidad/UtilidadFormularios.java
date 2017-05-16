@@ -32,6 +32,6 @@ public class UtilidadFormularios {
     public static final String ORDEN_SERVICIO_DESTINO = "D";
     public static final String ORDEN_SERVICIO_CIUDAD = "C";
     public static final String ORDEN_SERVICIO_HOTEL_DESTINO = "H,D";
-    public static final String ORDEN_SERVICIO_HOTEL_DESTINO_CIUDAD = "H,D,C";
+    public static final String ORDEN_SERVICIO_HOTEL_DESTINO_CIUDAD = "D,C,H";
 
 }

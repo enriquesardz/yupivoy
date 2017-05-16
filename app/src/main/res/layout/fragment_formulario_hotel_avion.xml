@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_presupuesto"/>
             <Spinner
+                android:id="@+id/presupuesto_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </Spinner>
@@ -33,15 +34,9 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
             </Spinner>
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_donde_quieres_ir"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_destino"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -61,31 +56,36 @@
                     android:layout_gravity="center_vertical|right"
                     android:visibility="gone"/>
             </LinearLayout>
-
-
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_hotel_especial"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_hotel"/>
-            <Spinner
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-            </Spinner>
-            <View style="@style/Divider"/>
+                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                    android:id="@+id/hotel_datv"
+                    android:layout_weight="1"
+                    android:hint="@string/frmlr_hotel"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="flagNoExtractUi|actionSearch"/>
+                <ProgressBar
+                    android:id="@+id/hotel_indicador_carga"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:visibility="gone"/>
+            </LinearLayout>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_fecha_hospedaje"/>
-
             <!-- SECCION DE FECHA HOSPEDAJE -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
@@ -102,7 +102,7 @@
                         android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
@@ -143,8 +143,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_fechas_flexibles"/>
             <!-- FIN SECCION DE FECHA HOSPEDAJE -->
-
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_alguna_preferencia_hotel"/>
             <TextView
@@ -168,7 +166,6 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_alguna_preferencia_avion"/>
             <TextView
@@ -185,7 +182,6 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_hospedan_habitacion"/>
             <TextView
@@ -209,7 +205,6 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Spinner>
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_opcion_especial"/>
             <CheckBox
@@ -228,7 +223,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_vip_abordar"/>
-            <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_comentarios"/>
             <EditText
