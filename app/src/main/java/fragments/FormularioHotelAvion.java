@@ -58,11 +58,17 @@ public class FormularioHotelAvion extends Fragment {
         mContext = getContext();
         View view = inflater.inflate(R.layout.fragment_formulario_hotel_avion, container, false);
 
+        inicializarComponentes(view);
+
+        return view;
+    }
+
+    private void inicializarComponentes(View view){
         fechaEntradaEditText = (EditText) view.findViewById(R.id.fecha_entrada_edittext);
         fechaSalidaEditText = (EditText) view.findViewById(R.id.fecha_salida_edittext);
         nochesTextView = (TextView)view.findViewById(R.id.noches_textview);
 
-        //Crea los calendarios, este obj debe regresar la fecha 1, fecha 2, y las noches. 
+        //Crea los calendarios, este obj debe regresar la fecha 1, fecha 2, y las noches.
         //TODO: Que el obj FechaHospedaje pueda regresar fecha1, fecha2, y las noches.
         FechaHospedaje fechaHospedaje = new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView, mContext);
 
@@ -139,11 +145,6 @@ public class FormularioHotelAvion extends Fragment {
                 hotelAutoComplete.setText(servicioO.getDescripcion());
             }
         });
-        return view;
-    }
-
-    private void inicializarComponentes(){
-
     }
 
 }
