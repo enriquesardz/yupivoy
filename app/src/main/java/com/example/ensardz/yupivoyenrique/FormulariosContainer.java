@@ -10,11 +10,21 @@ import fragments.FormularioHotelAvion;
 
 public class FormulariosContainer extends AppCompatActivity {
 
+    private static final String TAG_HOTEL_AVION_FRAGMENT = "hotel_avion_fragment";
+    private Fragment mHotelAvionFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formularios_container);
-        Fragment fragment = new FormularioHotelAvion();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        if (savedInstanceState!= null){
+            onRestoreInstanceState(savedInstanceState);
+        }
+        //TODO: Aqui regresa null cuando cambia de orientacion, buscar como retener el fragment para que no se borren
+        //TODO: los contenidos de los EditText
+        if (mHotelAvionFragment == null){
+            mHotelAvionFragment = new FormularioHotelAvion();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotelAvionFragment, TAG_HOTEL_AVION_FRAGMENT).commit();
+        }
+
     }
 }
