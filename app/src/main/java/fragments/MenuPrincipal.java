@@ -1,6 +1,7 @@
 package fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,18 @@ import com.example.ensardz.yupivoyenrique.R;
  */
 public class MenuPrincipal extends Fragment {
 
+    public static final String APP_KEY = "com.example.ensardz.yupivoyenrique.formularios";
+    public static final int FRAGMENT_ID_HOTEL = 100;
+    public static final int FRAGMENT_ID_AVION = 150;
+    public static final int FRAGMENT_ID_HOTEL_AVION = 200;
+
+
+    private Context mContext;
+
+    private Button hotelButton;
+    private Button avionButton;
     private Button hotelAvionButton;
+
 
     public MenuPrincipal() {
         // Required empty public constructor
@@ -28,16 +40,44 @@ public class MenuPrincipal extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_menu_principal, container, false);
+        mContext = getContext();
+        inicializarViews(view);
+
+        return view;
+    }
+
+    private void inicializarViews(View view){
+        //Boton Hotel
+        final Intent intent = new Intent(mContext, FormulariosContainer.class);
+        hotelButton = (Button)view.findViewById(R.id.hotel_button);
+        hotelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.putExtra(APP_KEY, FRAGMENT_ID_HOTEL);
+                startActivity(intent);
+            }
+        });
+        //Boton Avion
+        avionButton =(Button)view.findViewById(R.id.avion_button);
+        avionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.putExtra(APP_KEY,FRAGMENT_ID_AVION);
+                startActivity(intent);
+            }
+        });
+        //Boton Hotel Avion
         hotelAvionButton = (Button)view.findViewById(R.id.hotel_avion_button);
         hotelAvionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), FormulariosContainer.class);
+                intent.putExtra(APP_KEY,FRAGMENT_ID_HOTEL_AVION);
                 startActivity(intent);
             }
         });
-        return view;
+
     }
 
 }

@@ -36,7 +36,9 @@
             android:label="@string/contacto_titulo"
             android:parentActivityName=".MainActivity"
             android:theme="@style/SecondaryPurpleTheme"></activity>
-        <activity android:name=".FormulariosContainer"></activity>
+        <activity android:name=".FormulariosContainer"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
