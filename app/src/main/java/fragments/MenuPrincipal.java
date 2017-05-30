@@ -18,7 +18,9 @@ import com.example.ensardz.yupivoyenrique.R;
  */
 public class MenuPrincipal extends Fragment {
 
+    //La KEY de la aplicacion
     public static final String APP_KEY = "com.example.ensardz.yupivoyenrique.formularios";
+    //ID's que se usan para saber que fragment se va a inflar.
     public static final int FRAGMENT_ID_HOTEL = 100;
     public static final int FRAGMENT_ID_AVION = 150;
     public static final int FRAGMENT_ID_HOTEL_AVION = 200;

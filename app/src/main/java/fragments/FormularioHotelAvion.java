@@ -1,6 +1,5 @@
 package fragments;
 
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -21,12 +19,6 @@ import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
 import com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView;
 import com.example.ensardz.yupivoyenrique.utilidad.UtilidadFormularios;
 import com.example.ensardz.yupivoyenrique.utilidad.FechaHospedaje;
-
-import java.lang.reflect.Array;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 
 public class FormularioHotelAvion extends Fragment {
@@ -74,40 +66,40 @@ public class FormularioHotelAvion extends Fragment {
         FechaHospedaje fechaHospedaje = new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView, mContext);
 
         //Se llenan todos los spinners
-        Spinner presupuestoSpinner = (Spinner)view.findViewById(R.id.presupuesto_spinner);
-        ArrayAdapter<CharSequence> presupuestoAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_hotel_avion_presupuesto_spinner_array, android.R.layout.simple_spinner_item);
-        presupuestoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        presupuestoSpinner.setAdapter(presupuestoAdapter);
-
-        Spinner modoPagoSpinner = (Spinner)view.findViewById(R.id.modo_pago_spinner);
-        ArrayAdapter<CharSequence> modoPAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_hotel_avion_modo_pago_spinner_array, android.R.layout.simple_spinner_item);
-        modoPAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        modoPagoSpinner.setAdapter(modoPAdapter);
-
-        Spinner tipoHotelSpinner = (Spinner)view.findViewById(R.id.tipo_hotel_spinner);
-        ArrayAdapter<CharSequence> tipoHotelAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_hotel_avion_tipo_hotel_array, android.R.layout.simple_spinner_item);
-        tipoHotelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        tipoHotelSpinner.setAdapter(tipoHotelAdapter);
-
-        Spinner planHabitacionSpinner = (Spinner)view.findViewById(R.id.plan_habitacion_spinner);
-        ArrayAdapter<CharSequence> planHabitacionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_hotel_avion_plan_habitacion_array, android.R.layout.simple_spinner_item);
-        planHabitacionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        planHabitacionSpinner.setAdapter(planHabitacionAdapter);
-
-        Spinner tipoHabitacionSpinner = (Spinner)view.findViewById(R.id.tipo_habitacion_spinner);
-        ArrayAdapter<CharSequence> tipoHabitacionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_hotel_avion_tipo_habitacion_array, android.R.layout.simple_spinner_item);
-        tipoHabitacionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        tipoHabitacionSpinner.setAdapter(tipoHabitacionAdapter);
-
-        Spinner claseAvionSpinner = (Spinner)view.findViewById(R.id.clase_avion_spinner);
-        ArrayAdapter<CharSequence> claseAvionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_hotel_avion_clase_avion_array, android.R.layout.simple_spinner_item);
-        claseAvionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        claseAvionSpinner.setAdapter(claseAvionAdapter);
-
-        Spinner companiaAereaSpinner = (Spinner)view.findViewById(R.id.compania_aerea_spinner);
-        ArrayAdapter<CharSequence> companiaAereaAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_hotel_avion_compañia_aerea_array, android.R.layout.simple_spinner_item);
-        companiaAereaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        companiaAereaSpinner.setAdapter(companiaAereaAdapter);
+//        Spinner presupuestoSpinner = (Spinner)view.findViewById(R.id.presupuesto_spinner);
+//        ArrayAdapter<CharSequence> presupuestoAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_presupuesto_spinner_array, android.R.layout.simple_spinner_item);
+//        presupuestoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        presupuestoSpinner.setAdapter(presupuestoAdapter);
+//
+//        Spinner modoPagoSpinner = (Spinner)view.findViewById(R.id.modo_pago_spinner);
+//        ArrayAdapter<CharSequence> modoPAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_modo_pago_spinner_array, android.R.layout.simple_spinner_item);
+//        modoPAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        modoPagoSpinner.setAdapter(modoPAdapter);
+//
+//        Spinner tipoHotelSpinner = (Spinner)view.findViewById(R.id.tipo_hotel_spinner);
+//        ArrayAdapter<CharSequence> tipoHotelAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_tipo_hotel_array, android.R.layout.simple_spinner_item);
+//        tipoHotelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        tipoHotelSpinner.setAdapter(tipoHotelAdapter);
+//
+//        Spinner planHabitacionSpinner = (Spinner)view.findViewById(R.id.plan_habitacion_spinner);
+//        ArrayAdapter<CharSequence> planHabitacionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_plan_habitacion_array, android.R.layout.simple_spinner_item);
+//        planHabitacionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        planHabitacionSpinner.setAdapter(planHabitacionAdapter);
+//
+//        Spinner tipoHabitacionSpinner = (Spinner)view.findViewById(R.id.tipo_habitacion_spinner);
+//        ArrayAdapter<CharSequence> tipoHabitacionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_tipo_habitacion_array, android.R.layout.simple_spinner_item);
+//        tipoHabitacionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        tipoHabitacionSpinner.setAdapter(tipoHabitacionAdapter);
+//
+//        Spinner claseAvionSpinner = (Spinner)view.findViewById(R.id.clase_avion_spinner);
+//        ArrayAdapter<CharSequence> claseAvionAdapter = ArrayAdapter.createFromResource(mContext, R.array.frmlr_clase_avion_array, android.R.layout.simple_spinner_item);
+//        claseAvionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        claseAvionSpinner.setAdapter(claseAvionAdapter);
+//
+//        Spinner companiaAereaSpinner = (Spinner)view.findViewById(R.id.compania_aerea_spinner);
+//        ArrayAdapter<CharSequence> companiaAereaAdapter = ArrayAdapter.createFromResource(mContext,R.array.frmlr_compania_aerea_array, android.R.layout.simple_spinner_item);
+//        companiaAereaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        companiaAereaSpinner.setAdapter(companiaAereaAdapter);
 
         //Crea los Delay Autocomplete text view para que traiga las sugerencias para los servicios.
         //Delay autocomplete Destino

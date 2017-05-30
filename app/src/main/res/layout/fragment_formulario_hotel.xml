@@ -24,7 +24,8 @@
                 android:text="@string/frmlr_presupuesto"/>
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_presupuesto_spinner_array">
             </Spinner>
             <TextView
                 android:layout_width="match_parent"
@@ -32,8 +33,9 @@
                 android:text="@string/frmlr_modo_pago"/>
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_modo_pago_spinner_array"
+                >
             </Spinner>
             <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
@@ -66,34 +68,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/frmlr_fecha_entrada"/>
-                    <TextView
+                    <EditText
+                        android:id="@+id/fecha_entrada_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fecha 1" />
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:focusable="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/frmlr_fecha_entrada"/>
-                    <TextView
+                        android:text="@string/frmlr_fecha_salida"/>
+                    <EditText
+                        android:id="@+id/fecha_salida_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fecha 2" />
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -106,6 +116,7 @@
                         android:layout_gravity="center"
                         android:text="@string/frmlr_noches"/>
                     <TextView
+                        android:id="@+id/noches_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -127,21 +138,27 @@
                 android:text="@string/frmlr_tipo_hotel"/>
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_tipo_hotel_array"
+                ></Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_plan_habitacion"/>
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_plan_habitacion_array"
+                ></Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/frmlr_tipo_habitacion"/>
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_tipo_habitacion_array"
+                ></Spinner>
             <View style="@style/Divider"/>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_hospedan_habitacion"/>

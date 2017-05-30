@@ -25,7 +25,8 @@
             <Spinner
                 android:id="@+id/presupuesto_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_presupuesto_spinner_array">
             </Spinner>
             <TextView
                 android:layout_width="match_parent"
@@ -34,7 +35,8 @@
             <Spinner
                 android:id="@+id/modo_pago_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_modo_pago_spinner_array">
             </Spinner>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_donde_quieres_ir"/>
@@ -153,7 +155,9 @@
             <Spinner
                 android:id="@+id/tipo_hotel_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_tipo_hotel_array"
+                ></Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,7 +165,9 @@
             <Spinner
                 android:id="@+id/plan_habitacion_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_plan_habitacion_array"
+                ></Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -169,7 +175,9 @@
             <Spinner
                 android:id="@+id/tipo_habitacion_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_tipo_habitacion_array"
+                ></Spinner>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_alguna_preferencia_avion"/>
             <TextView
@@ -179,7 +187,9 @@
             <Spinner
                 android:id="@+id/clase_avion_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_clase_avion_array"
+                ></Spinner>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -187,7 +197,9 @@
             <Spinner
                 android:id="@+id/compania_aerea_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_compania_aerea_array"
+                ></Spinner>
             <TextView style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_hospedan_habitacion"/>
             <TextView
