@@ -24,38 +24,37 @@ public class FormulariosContainer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formularios_container);
 
-        if (savedInstanceState!= null){
-            onRestoreInstanceState(savedInstanceState);
-        }
-
         //Recibe la informacion extra del MenuPrincipal
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         idFragment = bundle.getInt(MenuPrincipal.APP_KEY);
 
-        //TODO: Aqui regresa null cuando cambia de orientacion, buscar como retener el fragment para que no se borren
-        //TODO: los contenidos de los EditText
-        switch (idFragment){
-            case MenuPrincipal.FRAGMENT_ID_HOTEL:
-                if(mHotelFragment == null){
-                    mHotelFragment = new FormularioHotel();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotelFragment).commit();
-                }
-                break;
-            case MenuPrincipal.FRAGMENT_ID_AVION:
-                if (mAvionFragment == null){
-                    mAvionFragment = new FormularioAvion();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mAvionFragment).commit();
-                }
-                break;
-            case MenuPrincipal.FRAGMENT_ID_HOTEL_AVION:
-                if (mHotelAvionFragment == null){
-                    mHotelAvionFragment = new FormularioHotelAvion();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotelAvionFragment).commit();
-                }
-                break;
-            default:
-                break;
+        if (savedInstanceState == null){
+            //TODO: Aqui regresa null cuando cambia de orientacion, buscar como retener el fragment para que no se borren
+            //TODO: los contenidos de los EditText
+            switch (idFragment){
+                case MenuPrincipal.FRAGMENT_ID_HOTEL:
+                    if(mHotelFragment == null){
+                        mHotelFragment = new FormularioHotel();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotelFragment).commit();
+                    }
+                    break;
+                case MenuPrincipal.FRAGMENT_ID_AVION:
+                    if (mAvionFragment == null){
+                        mAvionFragment = new FormularioAvion();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mAvionFragment).commit();
+                    }
+                    break;
+                case MenuPrincipal.FRAGMENT_ID_HOTEL_AVION:
+                    if (mHotelAvionFragment == null){
+                        mHotelAvionFragment = new FormularioHotelAvion();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotelAvionFragment).commit();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 }
