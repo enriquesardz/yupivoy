@@ -51,8 +51,9 @@ public class MenuPrincipal extends Fragment {
     }
 
     private void inicializarViews(View view){
-        //Boton Hotel
+
         final Intent intent = new Intent(mContext, FormulariosContainer.class);
+        //Boton Hotel
         hotelButton = (Button)view.findViewById(R.id.hotel_button);
         hotelButton.setOnClickListener(new View.OnClickListener() {
             @Override

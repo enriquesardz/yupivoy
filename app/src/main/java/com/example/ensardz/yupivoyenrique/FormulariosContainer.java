@@ -29,9 +29,8 @@ public class FormulariosContainer extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         idFragment = bundle.getInt(MenuPrincipal.APP_KEY);
 
+        //TODO: La actividad retiene el estado pero solamente ded HotelAvion
         if (savedInstanceState == null){
-            //TODO: Aqui regresa null cuando cambia de orientacion, buscar como retener el fragment para que no se borren
-            //TODO: los contenidos de los EditText
             switch (idFragment){
                 case MenuPrincipal.FRAGMENT_ID_HOTEL:
                     if(mHotelFragment == null){

@@ -23,6 +23,7 @@
                 android:textSize="32sp" />
 
             <RadioGroup
+                android:id="@+id/tipo_vuelo_radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -43,6 +44,7 @@
                 android:text="@string/frmlr_modo_pago" />
 
             <Spinner
+                android:id="@+id/modo_pago_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/frmlr_modo_pago_spinner_array"
@@ -54,25 +56,44 @@
                 style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_donde_vas" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_aeropuerto_salida" />
+                android:layout_height="wrap_content">
+                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                    android:id="@+id/aeropuerto_salida_dactv"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/frmlr_aeropuerto_salida"
+                    android:imeOptions="actionNext"/>
+                <ProgressBar
+                    android:id="@+id/aeropuerto_salida_indicador_carga"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:visibility="gone"/>
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/editText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_destino" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content">
+                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                    android:id="@+id/destino_dactv"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/frmlr_destino"
+                    android:imeOptions="flagNavigateNext|actionNext"/>
+                <ProgressBar
+                    android:id="@+id/destino_indicador_carga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    />
+            </LinearLayout>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -7,10 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
@@ -63,12 +61,14 @@ public class FormularioHotelAvion extends Fragment {
 
         //Crea los calendarios, este obj debe regresar la fecha 1, fecha 2, y las noches.
         //TODO: Que el obj FechaHospedaje pueda regresar fecha1, fecha2, y las noches.
+        //TODO: Las noches se deben de actualizar cuando CAMBIA el contenido del text view de fecha 2.
+        //TODO: Que el textview 2 se habilite cuando cambie el contenido del textview 1.
         FechaHospedaje fechaHospedaje = new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText,nochesTextView, mContext);
 
 
         //Crea los Delay Autocomplete text view para que traiga las sugerencias para los servicios.
         //Delay autocomplete Destino
-        final DelayAutoCompleteTextView destinoAutoComplete = (DelayAutoCompleteTextView) view.findViewById(R.id.destino_datv);
+        final DelayAutoCompleteTextView destinoAutoComplete = (DelayAutoCompleteTextView) view.findViewById(R.id.destino_dactv);
         destinoAutoComplete.setThreshold(THRESHOLD);
         destinoAutoComplete.setAdapter(new BusquedaAutoCompleteAdapter(mContext, UtilidadFormularios.TIPO_SERVICIO_HOTEL_DESTINO_CIUDAD));
         destinoAutoComplete.setLoadingIndicator((ProgressBar)view.findViewById(R.id.destino_indicador_carga));

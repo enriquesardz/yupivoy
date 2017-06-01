@@ -1,7 +1,6 @@
 package com.example.ensardz.yupivoyenrique;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -93,6 +92,9 @@ public class BusquedaAutoCompleteAdapter extends BaseAdapter implements Filterab
                 break;
             case UtilidadFormularios.ID_SERVICIO_HOTEL:
                 listItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_list_icon_hotel,0,0,0);
+                break;
+            case UtilidadFormularios.ID_SERVICIO_VUELO_SALIDA:
+                listItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_list_icon_vuelo_salida,0,0,0);
                 break;
             default:
                 listItem.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0); //O cambiar por imagen default
