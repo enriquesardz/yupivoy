@@ -1,109 +1,112 @@
 package fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
 import com.example.ensardz.yupivoyenrique.R;
+import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
+import com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView;
+import com.example.ensardz.yupivoyenrique.utilidad.FechaHospedaje;
+import com.example.ensardz.yupivoyenrique.utilidad.UtilidadFormularios;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link FormularioAvion.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link FormularioAvion#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class FormularioAvion extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private static final String LOG = FormularioAvion.class.getSimpleName();
+    private static final int THRESHOLD = 3;
 
-    private OnFragmentInteractionListener mListener;
+    private RadioGroup tipoVueloRG;
+    private Spinner modoPagoSpinner;
+    private DelayAutoCompleteTextView aeropuertoSalidaDACTV;
+    private DelayAutoCompleteTextView destinoDACTV;
+    private EditText fechaEntradaEditText;
+    private EditText fechaSalidaEditText;
+    private TextView nochesTextView;
+
+    private Context mContext;
 
     public FormularioAvion() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FormularioAvion.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FormularioAvion newInstance(String param1, String param2) {
-        FormularioAvion fragment = new FormularioAvion();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setRetainInstance(true);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_formulario_avion, container, false);
+        View view = inflater.inflate(R.layout.fragment_formulario_avion, container, false);
+        mContext = getContext();
+        inicializarComponentes(view);
+        return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+    private void inicializarComponentes(View view){
+        tipoVueloRG = (RadioGroup)view.findViewById(R.id.tipo_vuelo_radio_group);
+        modoPagoSpinner = (Spinner)view.findViewById(R.id.modo_pago_spinner);
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+        //Calendario
+        fechaEntradaEditText = (EditText)view.findViewById(R.id.fecha_entrada_edittext);
+        fechaSalidaEditText = (EditText)view.findViewById(R.id.fecha_salida_edittext);
+        nochesTextView = (TextView)view.findViewById(R.id.noches_textview);
+        FechaHospedaje fechaHospedaje = new FechaHospedaje(fechaEntradaEditText,fechaSalidaEditText, nochesTextView, mContext);
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        //Aeropuerto Salida Auto Complete
+        aeropuertoSalidaDACTV = (DelayAutoCompleteTextView)view.findViewById(R.id.aeropuerto_salida_dactv);
+        aeropuertoSalidaDACTV.setThreshold(THRESHOLD);
+        aeropuertoSalidaDACTV.setAdapter(new BusquedaAutoCompleteAdapter(mContext, UtilidadFormularios.TIPO_SERVICIO_VUELO_SALIDA));
+        aeropuertoSalidaDACTV.setLoadingIndicator((ProgressBar)view.findViewById(R.id.aeropuerto_salida_indicador_carga));
+        aeropuertoSalidaDACTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aeropuertoSalidaDACTV.setText("");
+            }
+        });
+        aeropuertoSalidaDACTV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ServicioO servicio = (ServicioO) parent.getItemAtPosition(position);
+                aeropuertoSalidaDACTV.setText(servicio.getDescripcion());
+            }
+        });
+
+        //Destino autocomplete
+        destinoDACTV = (DelayAutoCompleteTextView)view.findViewById(R.id.destino_dactv);
+        destinoDACTV.setThreshold(THRESHOLD);
+        destinoDACTV.setAdapter(new BusquedaAutoCompleteAdapter(mContext, UtilidadFormularios.TIPO_SERVICIO_DESTINO));
+        destinoDACTV.setLoadingIndicator((ProgressBar)view.findViewById(R.id.destino_indicador_carga));
+        destinoDACTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                destinoDACTV.setText("");
+            }
+        });
+        destinoDACTV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ServicioO servicio = (ServicioO) parent.getItemAtPosition(position);
+                destinoDACTV.setText(servicio.getDescripcion());
+            }
+        });
     }
 }

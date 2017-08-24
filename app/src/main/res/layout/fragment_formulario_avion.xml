@@ -23,6 +23,7 @@
                 android:textSize="32sp" />
 
             <RadioGroup
+                android:id="@+id/tipo_vuelo_radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -43,8 +44,11 @@
                 android:text="@string/frmlr_modo_pago" />
 
             <Spinner
+                android:id="@+id/modo_pago_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_modo_pago_spinner_array"
+                ></Spinner>
 
             <View style="@style/Divider" />
 
@@ -52,25 +56,44 @@
                 style="@style/SubTituloFormulario"
                 android:text="@string/frmlr_sub_donde_vas" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_aeropuerto_salida" />
+                android:layout_height="wrap_content">
+                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                    android:id="@+id/aeropuerto_salida_dactv"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/frmlr_aeropuerto_salida"
+                    android:imeOptions="actionNext"/>
+                <ProgressBar
+                    android:id="@+id/aeropuerto_salida_indicador_carga"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:visibility="gone"/>
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/editText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_destino" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content">
+                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                    android:id="@+id/destino_dactv"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/frmlr_destino"
+                    android:imeOptions="flagNavigateNext|actionNext"/>
+                <ProgressBar
+                    android:id="@+id/destino_indicador_carga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyleSmall"
+                    />
+            </LinearLayout>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,59 +109,59 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/frmlr_fecha_entrada" />
-
-                    <TextView
+                        android:text="@string/frmlr_fecha_entrada"/>
+                    <EditText
+                        android:id="@+id/fecha_entrada_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fecha 1" />
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:focusable="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/frmlr_fecha_entrada" />
-
-                    <TextView
+                        android:text="@string/frmlr_fecha_salida"/>
+                    <EditText
+                        android:id="@+id/fecha_salida_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fecha 2" />
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"/>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="@string/frmlr_noches" />
-
+                        android:text="@string/frmlr_noches"/>
                     <TextView
+                        android:id="@+id/noches_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="0" />
+                        android:text="0"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -161,7 +184,9 @@
 
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_clase_avion_array"
+                ></Spinner>
 
             <TextView
                 android:layout_width="match_parent"
@@ -170,7 +195,9 @@
 
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/frmlr_compania_aerea_array"
+                ></Spinner>
 
             <View style="@style/Divider" />
 

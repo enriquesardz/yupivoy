@@ -13,20 +13,23 @@
         style="@style/TituloRoboto"
         />
 <LinearLayout
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:padding="16dp"
     android:orientation="vertical">
     <Button
+        android:id="@+id/hotel_button"
         android:layout_weight="1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_hotel"
         style="@style/BotonMenuPrincipal"
         android:text="@string/mp_hotel"/>
     <Button
+        android:id="@+id/avion_button"
         android:layout_weight="1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_hotel"
         style="@style/BotonMenuPrincipal"
@@ -34,7 +37,7 @@
     <Button
         android:id="@+id/hotel_avion_button"
         android:layout_weight="1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_hotel"
         style="@style/BotonMenuPrincipal"

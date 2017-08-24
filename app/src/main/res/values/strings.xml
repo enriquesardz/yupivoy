@@ -144,6 +144,61 @@
     <string name="frmlr_renta_de_carro">Renta de carro</string>
     <string name="frmlr_seleccionar_fecha">Seleccionar fecha...</string>
 
+    <!-- Sring arrays para los spinners de los formularios-->
+    <string-array name="frmlr_presupuesto_spinner_array">
+        <item>Seleccionar</item>
+        <item>$10,000 a $15,000</item>
+        <item>$15,000 a $20,000</item>
+        <item>$20,000 a $30,000</item>
+        <item>$30,000 a $50,000</item>
+        <item>$50,000 a $70,000</item>
+        <item>$70,000 a $100,000</item>
+        <item>$100,000 a $200,000</item>
+    </string-array>
+
+    <string-array name="frmlr_modo_pago_spinner_array">
+        <item>Seleccionar</item>
+        <item>Efectivo</item>
+        <item>Tarjeta de credito</item>
+    </string-array>
+
+    <string-array name="frmlr_tipo_hotel_array">
+        <item>Seleccionar</item>
+        <item>Sólo adultos</item>
+        <item>Familiar</item>
+    </string-array>
+
+    <string-array name="frmlr_plan_habitacion_array">
+        <item>Seleccionar</item>
+        <item>Todo incluído</item>
+        <item>Sólo Desayuno</item>
+        <item>Sólo Hospedaje</item>
+        <item>Cocineta</item>
+        <item>Servicio al cuarto</item>
+    </string-array>
+
+    <string-array name="frmlr_tipo_habitacion_array">
+        <item>Seleccionar</item>
+        <item>Estándar</item>
+        <item>Vista al mar</item>
+    </string-array>
+
+    <string-array name="frmlr_clase_avion_array">
+        <item>Seleccionar</item>
+        <item>Cualquiera</item>
+        <item>Económica</item>
+        <item>Primera Clase</item>
+    </string-array>
+
+    <string-array name="frmlr_compania_aerea_array">
+        <item>Seleccionar</item>
+        <item>Cualquiera</item>
+        <item>Viva Aerobus</item>
+        <item>Volaris</item>
+        <item>Interjet</item>
+        <item>Magnicharters</item>
+        <item>Aeroméxico</item>
+    </string-array>
     <!-- Strings de los subtitulos para los Formularios -->
     <!-- Hotel -->
     <string name="frmlr_sub_donde_quieres_ir">¿A dónde quieres ir?</string>
