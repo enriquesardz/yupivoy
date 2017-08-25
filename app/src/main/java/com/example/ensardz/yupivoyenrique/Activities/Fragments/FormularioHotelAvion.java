@@ -1,4 +1,4 @@
-package fragments;
+package com.example.ensardz.yupivoyenrique.Activities.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
 import com.example.ensardz.yupivoyenrique.R;
-import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
-import com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView;
-import com.example.ensardz.yupivoyenrique.utilidad.UtilidadFormularios;
-import com.example.ensardz.yupivoyenrique.utilidad.FechaHospedaje;
+import com.example.ensardz.yupivoyenrique.Data.POJOs.ServicioO;
+import com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView;
+import com.example.ensardz.yupivoyenrique.Utility.UtilidadFormularios;
+import com.example.ensardz.yupivoyenrique.Utility.FechaHospedaje;
 
 
 public class FormularioHotelAvion extends Fragment {

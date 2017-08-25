@@ -26,7 +26,7 @@
 
         <fragment
             android:id="@+id/fragment_container"
-            android:name="fragments.MenuPrincipal"
+            android:name="com.example.ensardz.yupivoyenrique.Activities.Fragments.MenuPrincipal"
             android:layout="@layout/fragment_menu_principal"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragments.FormularioAvion">
+    tools:context=".Activities.Fragments.FormularioAvion">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                <com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView
                     android:id="@+id/aeropuerto_salida_dactv"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -78,7 +78,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.example.ensardz.yupivoyenrique.ui.DelayAutoCompleteTextView
+                <com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView
                     android:id="@+id/destino_dactv"
                     android:layout_weight="1"
                     android:layout_width="match_parent"

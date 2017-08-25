@@ -6,10 +6,10 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import fragments.FormularioAvion;
-import fragments.FormularioHotel;
-import fragments.FormularioHotelAvion;
-import fragments.MenuPrincipal;
+import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioAvion;
+import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioHotel;
+import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioHotelAvion;
+import com.example.ensardz.yupivoyenrique.Activities.Fragments.MenuPrincipal;
 
 public class FormulariosContainer extends AppCompatActivity {
 

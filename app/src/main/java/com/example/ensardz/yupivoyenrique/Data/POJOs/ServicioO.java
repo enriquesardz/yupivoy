@@ -1,4 +1,4 @@
-package com.example.ensardz.yupivoyenrique.objetos;
+package com.example.ensardz.yupivoyenrique.Data.POJOs;
 
 /**
  * Created by ensardz on 25/04/2017.

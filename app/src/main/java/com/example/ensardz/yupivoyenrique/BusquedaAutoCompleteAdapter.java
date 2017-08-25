@@ -11,8 +11,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import com.example.ensardz.yupivoyenrique.objetos.ServicioO;
-import com.example.ensardz.yupivoyenrique.utilidad.UtilidadFormularios;
+import com.example.ensardz.yupivoyenrique.Data.POJOs.ServicioO;
+import com.example.ensardz.yupivoyenrique.Utility.UtilidadFormularios;
 
 import org.json.JSONArray;
 import org.json.JSONException;
