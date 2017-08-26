@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ensardz.yupivoyenrique.FormulariosContainer;
+import com.example.ensardz.yupivoyenrique.Activities.FormulariosContainerActivity;
 import com.example.ensardz.yupivoyenrique.R;
 
 
@@ -39,8 +39,8 @@ public class FormularioHotel extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Activity formContainerActivity = getActivity();
-        if(formContainerActivity instanceof FormulariosContainer){
-            ((FormulariosContainer)getActivity()).getSupportActionBar().setTitle(TITULO_FORMULARIO);
+        if(formContainerActivity instanceof FormulariosContainerActivity){
+            ((FormulariosContainerActivity)getActivity()).getSupportActionBar().setTitle(TITULO_FORMULARIO);
         }
         
         View view = inflater.inflate(R.layout.fragment_formulario_hotel, container, false);

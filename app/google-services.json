@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "304523977897",
+    "firebase_url": "https://yupivoy-f7d73.firebaseio.com",
+    "project_id": "yupivoy-f7d73",
+    "storage_bucket": "yupivoy-f7d73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304523977897:android:f1bb12f3bb332685",
+        "android_client_info": {
+          "package_name": "com.ensardz.yupivoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304523977897-24k8dbh04tjnda1pmo7b7eganrna2glg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ensardz.yupivoy",
+            "certificate_hash": "d71aa96293809ea51ad07d7a63d1e76714aeff7f"
+          }
+        },
+        {
+          "client_id": "304523977897-980kiudjofihgmcolb3uuo8nme1pkbl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3TycR3d5k7oTbGi-KZUdnOrbt_S60JBo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304523977897-980kiudjofihgmcolb3uuo8nme1pkbl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.example.ensardz.yupivoyenrique;
+package com.example.ensardz.yupivoyenrique.Activities;
 
 
 import android.content.Intent;
@@ -10,8 +10,9 @@ import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioAvion;
 import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioHotel;
 import com.example.ensardz.yupivoyenrique.Activities.Fragments.FormularioHotelAvion;
 import com.example.ensardz.yupivoyenrique.Activities.Fragments.MenuPrincipal;
+import com.example.ensardz.yupivoyenrique.R;
 
-public class FormulariosContainer extends AppCompatActivity {
+public class FormulariosContainerActivity extends AppCompatActivity {
 
     private Fragment mHotelFragment;
     private Fragment mAvionFragment;

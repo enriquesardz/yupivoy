@@ -1,9 +1,11 @@
-package com.example.ensardz.yupivoyenrique;
+package com.example.ensardz.yupivoyenrique.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class QuienesSomos extends AppCompatActivity {
+import com.example.ensardz.yupivoyenrique.R;
+
+public class QuienesSomosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

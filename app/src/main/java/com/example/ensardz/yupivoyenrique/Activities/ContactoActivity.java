@@ -1,10 +1,12 @@
-package com.example.ensardz.yupivoyenrique;
+package com.example.ensardz.yupivoyenrique.Activities;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Contacto extends AppCompatActivity {
+import com.example.ensardz.yupivoyenrique.R;
+
+public class ContactoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

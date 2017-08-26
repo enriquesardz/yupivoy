@@ -11,7 +11,7 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.ensardz.yupivoyenrique.QuienesSomos">
+    tools:context="com.example.ensardz.yupivoyenrique.Activities.QuienesSomosActivity">
 
     <TextView
         android:layout_width="wrap_content"

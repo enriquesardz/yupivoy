@@ -12,29 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/MainPinkTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/MainPinkTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".QuienesSomos"
+            android:name=".Activities.QuienesSomosActivity"
             android:label="@string/quienes_somos_titulo"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/SecondaryPurpleTheme" />
         <activity
-            android:name=".PorqueElegir"
+            android:name=".Activities.PorqueElegirActivity"
             android:label="@string/porque_elegir_titulo"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/SecondaryPurpleTheme" />
         <activity
-            android:name=".Contacto"
+            android:name=".Activities.ContactoActivity"
             android:label="@string/contacto_titulo"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/SecondaryPurpleTheme" />
         <activity
-            android:name=".FormulariosContainer"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".Activities.FormulariosContainerActivity"
+            android:parentActivityName=".Activities.MainActivity"></activity>
         <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

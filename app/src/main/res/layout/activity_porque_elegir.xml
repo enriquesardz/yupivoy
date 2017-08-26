@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.ensardz.yupivoyenrique.QuienesSomos">
+    tools:context="com.example.ensardz.yupivoyenrique.Activities.QuienesSomosActivity">
 
 
     <TextView

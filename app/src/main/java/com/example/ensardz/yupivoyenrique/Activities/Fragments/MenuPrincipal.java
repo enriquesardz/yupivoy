@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.ensardz.yupivoyenrique.FormulariosContainer;
+import com.example.ensardz.yupivoyenrique.Activities.FormulariosContainerActivity;
 import com.example.ensardz.yupivoyenrique.R;
 
 /**
@@ -52,7 +52,7 @@ public class MenuPrincipal extends Fragment {
 
     private void inicializarViews(View view){
 
-        final Intent intent = new Intent(mContext, FormulariosContainer.class);
+        final Intent intent = new Intent(mContext, FormulariosContainerActivity.class);
         //Boton Hotel
         hotelButton = (Button)view.findViewById(R.id.hotel_button);
         hotelButton.setOnClickListener(new View.OnClickListener() {

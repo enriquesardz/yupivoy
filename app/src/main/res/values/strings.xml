@@ -54,7 +54,7 @@
         Recuerda somos ¡Tu formulario de Viaje! Tu eliges que te conviene
     </string>
 
-    <!-- Activity Contacto -->
+    <!-- Activity ContactoActivity -->
     <string name="contacto_titulo">Contacto</string>
     <string name="contacto_nombre">Nombre</string>
     <string name="contacto_correo">Correo</string>

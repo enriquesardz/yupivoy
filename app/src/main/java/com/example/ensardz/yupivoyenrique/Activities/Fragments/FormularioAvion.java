@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.ensardz.yupivoyenrique.BusquedaAutoCompleteAdapter;
+import com.example.ensardz.yupivoyenrique.UI.BusquedaAutoCompleteAdapter;
 import com.example.ensardz.yupivoyenrique.R;
 import com.example.ensardz.yupivoyenrique.Data.POJOs.ServicioO;
 import com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView;

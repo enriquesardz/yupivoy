@@ -1,4 +1,4 @@
-package com.example.ensardz.yupivoyenrique;
+package com.example.ensardz.yupivoyenrique.UI;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,6 +12,7 @@ import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.example.ensardz.yupivoyenrique.Data.POJOs.ServicioO;
+import com.example.ensardz.yupivoyenrique.R;
 import com.example.ensardz.yupivoyenrique.Utility.UtilidadFormularios;
 
 import org.json.JSONArray;
