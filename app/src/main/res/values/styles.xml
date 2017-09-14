@@ -79,6 +79,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="FirebaseTheme" parent="MainPinkTheme">
+        <item name="colorPrimaryDark">@color/yupiMoradoDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/login_background</item>
+    </style>
+
     <style name="EstiloSeparadorListView" parent="@android:style/Widget.ListView">
         <item name="android:divider">#F00</item>
         <item name="android:dividerHeight">1dp</item>

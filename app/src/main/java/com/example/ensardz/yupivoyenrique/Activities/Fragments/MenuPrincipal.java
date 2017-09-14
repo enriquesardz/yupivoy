@@ -45,12 +45,12 @@ public class MenuPrincipal extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_menu_principal, container, false);
         mContext = getContext();
-        inicializarViews(view);
+        initComponentes(view);
 
         return view;
     }
 
-    private void inicializarViews(View view){
+    private void initComponentes(View view){
 
         final Intent intent = new Intent(mContext, FormulariosContainerActivity.class);
         //Boton Hotel

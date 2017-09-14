@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity
 
         mNavView = (NavigationView) findViewById(R.id.nav_view);
         mNavView.setNavigationItemSelectedListener(this);
+
+        mToolbar.setLogo(R.drawable.ic_yupivoy_logo_blanco);
     }
 
     @Override

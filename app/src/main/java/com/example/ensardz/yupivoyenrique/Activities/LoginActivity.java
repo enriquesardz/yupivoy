@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 0;
 
     private Context mContext;
-    private Button btnLogin;
 
     private FirebaseAuth auth;
     private List<AuthUI.IdpConfig> providers;
@@ -48,16 +47,9 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
-        btnLogin = (Button) findViewById(R.id.login_button);
-
         providers = new ArrayList<>();
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startLoginProviders();
-            }
-        });
+        startLoginProviders();
     }
 
     public void startLoginProviders() {
@@ -75,9 +67,9 @@ public class LoginActivity extends AppCompatActivity {
                     AuthUI.getInstance()
                             .createSignInIntentBuilder()
                             .setAvailableProviders(providers)
-                            .setTheme(R.style.MainPinkTheme)
+                            .setTheme(R.style.FirebaseTheme)
                             .setIsSmartLockEnabled(false, true)
-                            .setLogo(R.drawable.ic_yupivoy_logo)
+                            .setLogo(R.drawable.ic_logo_yupivoy_shadow_blanco)
                             .build(), RC_SIGN_IN);
         }
 
