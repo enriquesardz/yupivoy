@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.ensardz.yupivoyenrique.Activities.FormulariosContainerActivity;
 import com.example.ensardz.yupivoyenrique.R;
@@ -28,9 +29,9 @@ public class MenuPrincipal extends Fragment {
 
     private Context mContext;
 
-    private Button hotelButton;
-    private Button avionButton;
-    private Button hotelAvionButton;
+    private LinearLayout hotelButton;
+    private LinearLayout avionButton;
+    private LinearLayout hotelAvionButton;
 
 
     public MenuPrincipal() {
@@ -54,7 +55,7 @@ public class MenuPrincipal extends Fragment {
 
         final Intent intent = new Intent(mContext, FormulariosContainerActivity.class);
         //Boton Hotel
-        hotelButton = (Button)view.findViewById(R.id.hotel_button);
+        hotelButton = view.findViewById(R.id.hotel_button);
         hotelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +64,7 @@ public class MenuPrincipal extends Fragment {
             }
         });
         //Boton Avion
-        avionButton =(Button)view.findViewById(R.id.avion_button);
+        avionButton = view.findViewById(R.id.avion_button);
         avionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +73,7 @@ public class MenuPrincipal extends Fragment {
             }
         });
         //Boton Hotel Avion
-        hotelAvionButton = (Button)view.findViewById(R.id.hotel_avion_button);
+        hotelAvionButton = view.findViewById(R.id.hotel_avion_button);
         hotelAvionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

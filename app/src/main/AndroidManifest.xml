@@ -23,7 +23,7 @@
         <activity
             android:name=".Activities.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/MainPinkTheme.NoActionBar"></activity>
+            android:theme="@style/MainPinkTheme.NoActionBar"/>
         <activity
             android:name=".Activities.QuienesSomosActivity"
             android:label="@string/quienes_somos_titulo"

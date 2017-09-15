@@ -5,44 +5,178 @@
     android:orientation="vertical"
     tools:context=".Activities.Fragments.MenuPrincipal">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/mp_cotiza_tu_viaje"
-        style="@style/TituloRoboto"
-        />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:padding="16dp"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/hotel_button"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_hotel"
-        style="@style/BotonMenuPrincipal"
-        android:text="@string/mp_hotel"/>
-    <Button
-        android:id="@+id/avion_button"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_hotel"
-        style="@style/BotonMenuPrincipal"
-        android:text="@string/mp_avion"/>
-    <Button
-        android:id="@+id/hotel_avion_button"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_hotel"
-        style="@style/BotonMenuPrincipal"
-        android:text="@string/mp_hotel_avion"/>
-</LinearLayout>
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/secondary_text"
+                android:src="@drawable/ic_yupivoy_logo_blanco" /> <!-- Ads -->
+
+            <TextView
+                style="@style/TituloRoboto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:text="@string/mp_cotiza_tu_viaje"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:id="@+id/hotel_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:divider="@color/secondary_text"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_hotel" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:text="Hotel"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:id="@+id/avion_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:divider="@color/secondary_text"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_airplane" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:text="Avion"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:id="@+id/hotel_avion_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:divider="@color/secondary_text"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_hotel" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:text="Hotel + Avión"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    style="@style/TituloRoboto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:text="Compra ahora"
+                    android:textSize="25sp" />
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:divider="@color/secondary_text"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_learning" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:text="Reservar"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+                <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:drawableLeft="@drawable/ic_hotel"-->
+                <!--android:gravity="center|start"-->
+                <!--android:background="@color/blanco"-->
+                <!--android:textColor="@color/primary_text"-->
+                <!--android:textSize="40sp"-->
+                <!--android:text="Hotel"-->
+                <!--android:layout_height="150dp" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/hotel_button"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/ic_hotel"-->
+                <!--style="@style/BotonMenuPrincipal"-->
+                <!--android:text="@string/mp_hotel"/>-->
+                <!--<Button-->
+                <!--android:id="@+id/avion_button"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/ic_hotel"-->
+                <!--style="@style/BotonMenuPrincipal"-->
+                <!--android:text="@string/mp_avion"/>-->
+                <!--<Button-->
+                <!--android:id="@+id/hotel_avion_button"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/ic_hotel"-->
+                <!--style="@style/BotonMenuPrincipal"-->
+                <!--android:text="@string/mp_hotel_avion"/>-->
+            </LinearLayout> <!-- Botones cotizaciones -->
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -36,6 +36,19 @@ public class LoginActivity extends AppCompatActivity {
         initComponentes();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(mContext, MainActivity.class));
+            finish();
+        }
+
+        startLoginProviders();
+
+    }
+
     public void initComponentes() {
 
         if (getSupportActionBar() != null) {
@@ -47,12 +60,12 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
-        providers = new ArrayList<>();
-
         startLoginProviders();
     }
 
     public void startLoginProviders() {
+
+        providers = new ArrayList<>();
 
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build());
