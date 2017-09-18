@@ -14,13 +14,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@color/secondary_text"
-                android:src="@drawable/ic_yupivoy_logo_blanco" /> <!-- Ads -->
-
             <TextView
                 style="@style/TituloRoboto"
                 android:layout_width="match_parent"
@@ -174,8 +167,6 @@
                 <!--style="@style/BotonMenuPrincipal"-->
                 <!--android:text="@string/mp_hotel_avion"/>-->
             </LinearLayout> <!-- Botones cotizaciones -->
-
-
         </LinearLayout>
     </ScrollView>
 

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.ensardz.yupivoyenrique.Activities.FormulariosContainerActivity;
 import com.example.ensardz.yupivoyenrique.R;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 
 
 public class FormularioHotel extends Fragment {
@@ -22,6 +23,8 @@ public class FormularioHotel extends Fragment {
 //    private EditText fechaEntradaEditText;
 //    private EditText fechaSalidaEditText;
 //    private TextView nochesTextView;
+
+    private MaterialSpinner msPresupuesto;
 
     private Context mContext;
 
@@ -46,10 +49,21 @@ public class FormularioHotel extends Fragment {
         View view = inflater.inflate(R.layout.fragment_formulario_hotel, container, false);
         mContext = getContext();
 
+        initComponentes(view);
 
         return view;
     }
 
+    public void initComponentes(View view){
+        msPresupuesto = view.findViewById(R.id.presupuesto_spinner);
+
+        configSpinners();
+    }
+
+    public void configSpinners(){
+        msPresupuesto.setItems(getResources().getStringArray(R.array.frmlr_presupuesto_spinner_array));
+        msPresupuesto.setHint(getResources().getString(R.string.frmlr_presupuesto));
+    }
 
 
 }

@@ -3,212 +3,210 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.Fragments.FormularioHotel">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
             android:focusableInTouchMode="true"
-            android:orientation="vertical">
-            <TextView
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/presupuesto_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="32sp"
-                android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                android:text="@string/frmlr_titulo_hotel"/>
-            <TextView
+                android:layout_marginBottom="16dp"
+                android:entries="@array/frmlr_presupuesto_spinner_array"
+                android:hint="@string/frmlr_presupuesto" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_presupuesto"/>
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/frmlr_presupuesto_spinner_array">
-            </Spinner>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_modo_pago"/>
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:entries="@array/frmlr_modo_pago_spinner_array"
-                >
-            </Spinner>
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_donde_quieres_ir"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_destino"/>
+                android:hint="@string/frmlr_modo_pago" />
+
+            <View style="@style/Divider" />
+
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/frmlr_destino"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp" />
 
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_hotel_especial"/>
-            <TextView
+            <View style="@style/Divider" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_hotel"/>
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:hint="@string/frmlr_hotel" />
 
-            </Spinner>
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_fecha_hospedaje"/>
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/SubTituloFormulario"
+                android:text="@string/frmlr_sub_fecha_hospedaje" />
 
             <!-- SECCION DE FECHA HOSPEDAJE -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/frmlr_fecha_entrada"/>
+                        android:text="@string/frmlr_fecha_entrada" />
+
                     <EditText
                         android:id="@+id/fecha_entrada_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_horizontal_margin"
                         android:focusable="false"
-                        android:hint="@string/frmlr_seleccionar_fecha"/>
+                        android:hint="@string/frmlr_seleccionar_fecha"
+                        android:padding="@dimen/activity_horizontal_margin" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/frmlr_fecha_salida"/>
+                        android:text="@string/frmlr_fecha_salida" />
+
                     <EditText
                         android:id="@+id/fecha_salida_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_horizontal_margin"
-                        android:focusable="false"
                         android:clickable="false"
                         android:enabled="false"
-                        android:hint="@string/frmlr_seleccionar_fecha"/>
+                        android:focusable="false"
+                        android:hint="@string/frmlr_seleccionar_fecha"
+                        android:padding="@dimen/activity_horizontal_margin" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="@string/frmlr_noches"/>
+                        android:text="@string/frmlr_noches" />
+
                     <TextView
                         android:id="@+id/noches_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="0"/>
+                        android:text="0" />
                 </LinearLayout>
             </LinearLayout>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_fechas_flexibles"/>
+                android:text="@string/frmlr_fechas_flexibles" />
             <!-- FIN SECCION DE FECHA HOSPEDAJE -->
 
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_alguna_preferencia"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_tipo_hotel"/>
-            <Spinner
+            <View style="@style/Divider" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/frmlr_tipo_hotel_array"
-                ></Spinner>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_plan_habitacion"/>
-            <Spinner
+                android:hint="@string/frmlr_tipo_hotel" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/frmlr_plan_habitacion_array"
-                ></Spinner>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_tipo_habitacion"/>
-            <Spinner
+                android:hint="@string/frmlr_plan_habitacion" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/frmlr_tipo_habitacion_array"
-                ></Spinner>
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_hospedan_habitacion"/>
+                android:hint="@string/frmlr_tipo_habitacion" />
+
+            <View style="@style/Divider" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_adultos"/>
+                android:text="@string/frmlr_adultos" />
+
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_ninos"/>
+                android:text="@string/frmlr_ninos" />
+
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_edad_ninos"/>
+                android:text="@string/frmlr_edad_ninos" />
+
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_opcion_especial"/>
+                android:layout_height="wrap_content" />
+
+            <View style="@style/Divider" />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_transporte_aeropuerto_hotel"/>
+                android:text="@string/frmlr_transporte_aeropuerto_hotel" />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_renta_de_carro"/>
-            <View style="@style/Divider"/>
-            <TextView style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_comentarios"/>
+                android:text="@string/frmlr_renta_de_carro" />
+
+            <View style="@style/Divider" />
+
+            <TextView
+                style="@style/SubTituloFormulario"
+                android:text="@string/frmlr_sub_comentarios" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:backgroundTint="@color/yupiRosa"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:background="@drawable/border_button"
-                android:text="@string/boton_enviar"/>
+                android:backgroundTint="@color/yupiRosa"
+                android:padding="16dp"
+                android:text="@string/boton_enviar" />
         </LinearLayout>
     </ScrollView>
 

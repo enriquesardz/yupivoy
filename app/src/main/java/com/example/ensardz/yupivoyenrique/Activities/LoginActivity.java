@@ -54,13 +54,13 @@ public class LoginActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-
-        if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(mContext, MainActivity.class));
-            finish();
-        }
-
-        startLoginProviders();
+//
+//        if (auth.getCurrentUser() != null) {
+//            startActivity(new Intent(mContext, MainActivity.class));
+//            finish();
+//        }
+//
+//        startLoginProviders();
     }
 
     public void startLoginProviders() {
@@ -70,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build());
+        providers.add(new AuthUI.IdpConfig.Builder(AuthUI.TWITTER_PROVIDER).build());
 
         auth = FirebaseAuth.getInstance();
 
