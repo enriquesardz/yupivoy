@@ -208,7 +208,7 @@
     <string name="frmlr_sub_alguna_preferencia_hotel">¿Tiene alguna preferencia de Hotel?</string>
     <!-- Avion -->
     <string name="frmlr_sub_donde_vas">¿A dónde vas?</string>
-    <string name="frmlr_sub_cuando_salir">¿Cuándo quieres salir?</string>
+    <string name="frmlr_sub_fecha_vuelo">Fecha de vuelo</string>
     <string name="frmlr_sub_cuantos_viajan">¿Cuántos viajan?</string>
     <string name="frmlr_sub_alguna_preferencia_avion">¿Tiene alguna preferencia de Avión?</string>
 

@@ -15,13 +15,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                android:text="@string/frmlr_titulo_avion"
-                android:textSize="32sp" />
-
             <RadioGroup
                 android:id="@+id/tipo_vuelo_radio_group"
                 android:layout_width="match_parent"
@@ -38,23 +31,15 @@
                     android:text="@string/frmlr_ida_o_vuelta" />
             </RadioGroup>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_modo_pago" />
-
-            <Spinner
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:id="@+id/modo_pago_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="@string/frmlr_modo_pago"
                 android:entries="@array/frmlr_modo_pago_spinner_array"
-                ></Spinner>
+                />
 
             <View style="@style/Divider" />
-
-            <TextView
-                style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_donde_vas" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,6 +48,7 @@
                     android:id="@+id/aeropuerto_salida_dactv"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
+                    android:drawableLeft="@drawable/ic_airplane"
                     android:layout_height="wrap_content"
                     android:hint="@string/frmlr_aeropuerto_salida"
                     android:imeOptions="actionNext"/>
@@ -83,6 +69,7 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_list_icon_destino"
                     android:hint="@string/frmlr_destino"
                     android:imeOptions="flagNavigateNext|actionNext"/>
                 <ProgressBar
@@ -103,7 +90,7 @@
 
             <TextView
                 style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_cuando_salir" />
+                android:text="@string/frmlr_sub_fecha_vuelo" />
 
             <!-- SECCION DE FECHA HOSPEDAJE -->
             <LinearLayout
@@ -173,64 +160,40 @@
 
             <View style="@style/Divider" />
 
-            <TextView
-                style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_alguna_preferencia" />
-
-            <TextView
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_clase" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="@string/frmlr_clase"
                 android:entries="@array/frmlr_clase_avion_array"
-                ></Spinner>
+                />
 
-            <TextView
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_compania_aerea" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="@string/frmlr_compania_aerea"
                 android:entries="@array/frmlr_compania_aerea_array"
-                ></Spinner>
+                />
 
             <View style="@style/Divider" />
 
-            <TextView
-                style="@style/SubTituloFormulario"
-                android:text="@string/frmlr_sub_cuantos_viajan" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="match_parent"
+                android:hint="@string/frmlr_adultos"
+                android:layout_height="wrap_content"/>
 
-            <TextView
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_adultos" />
+                android:hint="@string/frmlr_ninos"
+                />
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
-
-            <TextView
+            <com.jaredrummler.materialspinner.MaterialSpinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/frmlr_ninos" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frmlr_bebes" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:hint="@string/frmlr_bebes"
+                />
 
             <View style="@style/Divider" />
 

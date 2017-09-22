@@ -27,12 +27,12 @@ dependencies {
 
     //Google firebase
     //Facebook
+    compile 'com.firebaseui:firebase-ui-auth:2.3.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.0.0-alpha1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.firebaseui:firebase-ui:2.3.0'
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     //Material Spinner
     compile 'com.jaredrummler:material-spinner:1.1.0'
     //Better pickers
