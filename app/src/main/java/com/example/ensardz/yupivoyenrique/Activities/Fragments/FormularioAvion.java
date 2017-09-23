@@ -19,6 +19,7 @@ import com.example.ensardz.yupivoyenrique.Data.POJOs.ServicioO;
 import com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView;
 import com.example.ensardz.yupivoyenrique.Utility.FechaHospedaje;
 import com.example.ensardz.yupivoyenrique.Utility.UtilidadFormularios;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 
 
 public class FormularioAvion extends Fragment {
@@ -27,7 +28,7 @@ public class FormularioAvion extends Fragment {
     private static final int THRESHOLD = 3;
 
     private RadioGroup tipoVueloRG;
-    private Spinner modoPagoSpinner;
+    private MaterialSpinner modoPagoSpinner;
     private DelayAutoCompleteTextView aeropuertoSalidaDACTV;
     private DelayAutoCompleteTextView destinoDACTV;
     private EditText fechaEntradaEditText;
@@ -63,7 +64,7 @@ public class FormularioAvion extends Fragment {
 
     private void inicializarComponentes(View view){
         tipoVueloRG = (RadioGroup)view.findViewById(R.id.tipo_vuelo_radio_group);
-        modoPagoSpinner = (Spinner)view.findViewById(R.id.modo_pago_spinner);
+        modoPagoSpinner = (MaterialSpinner)view.findViewById(R.id.modo_pago_spinner);
 
         //Calendario
         fechaEntradaEditText = (EditText)view.findViewById(R.id.fecha_entrada_edittext);

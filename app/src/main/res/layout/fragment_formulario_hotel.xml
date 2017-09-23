@@ -32,13 +32,15 @@
 
             <View style="@style/Divider" />
 
-            <EditText
+            <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_list_icon_destino"
                 android:hint="@string/frmlr_destino"
                 android:paddingLeft="8dp"
-                android:paddingStart="8dp" />
+                android:paddingStart="8dp" >
+                <com.example.ensardz.yupivoyenrique.UI.DelayAutoCompleteTextView />
+            </com.rengwuxian.materialedittext.MaterialEditText>
 
             <View style="@style/Divider" />
 

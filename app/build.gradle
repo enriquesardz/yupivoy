@@ -27,7 +27,7 @@ dependencies {
 
     //Google firebase
     //Facebook
-    compile 'com.firebaseui:firebase-ui-auth:2.3.0'
+    compile 'com.firebaseui:firebase-ui:2.3.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:design:26.0.0-alpha1'
@@ -37,6 +37,8 @@ dependencies {
     compile 'com.jaredrummler:material-spinner:1.1.0'
     //Better pickers
     compile 'com.code-troopers.betterpickers:library:3.1.0'
+    //Material EditText
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 
     testCompile 'junit:junit:4.12'
 }

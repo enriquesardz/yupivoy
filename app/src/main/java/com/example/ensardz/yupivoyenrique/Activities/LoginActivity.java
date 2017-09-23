@@ -70,7 +70,6 @@ public class LoginActivity extends AppCompatActivity {
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build());
         providers.add(new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build());
-        providers.add(new AuthUI.IdpConfig.Builder(AuthUI.TWITTER_PROVIDER).build());
 
         auth = FirebaseAuth.getInstance();
 
