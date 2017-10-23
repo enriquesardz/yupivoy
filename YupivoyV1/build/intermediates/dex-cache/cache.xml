@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/2e7f1e9bd4ada6db29b0d25a11c2dabf3b205d2f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce672872bb6f9a775bb52a91dc825d41e393e57b">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d4b1f11232815db39f7fe9d9af4302e4f09d71d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/ae8f35730c5b025f07b20233ec0a17b6d7c0e2ef/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f5ff5e3811e8c9485fd27f9052ae4d4d23a22d9d">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_88c0f0f0f14093fe9452086607375ca9e84f3eaf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/907a7d9265ff59428025f5715824116a12d691be/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2482bfd874e8b3927f4141105674ad392ff83698">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b49af6a0bcb0c72b505d21fdff6a80c5769d0665/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_b3a5a98d5e7f202306303374a27395498ed5cf35/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/92a52b9c0a1d0efe5a2944bb82f87b6cfbcfa2e5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a4590fa7eadce322ca893129fdc999074e1aa5bf">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_31f1af7fcf13da436e6676a3459c801e66372688/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.1.0-beta1/4205dd8c33ada1468ab377afff0be95304ef72a/constraint-layout-solver-1.1.0-beta1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="04205dd8c33ada1468ab377afff0be95304ef72a">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.1.0-beta1_2f4da81e1da47fd87e10a8bff8d77f067eaafe69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/cca0e94f6f5faa7e2d8629d7bc99c6ef339e9b3d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cfb0e06b74b6d9f1a0743d38a97808cf214bdcb1">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_deb237bb300c024ff2939d54a89040b77d26e4ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/e5bb71f8df45d1e122e04bcdebad31adc7007ee7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5b65ec1ebc84af3baecfd28954c9e7ff01b937a8">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7e68812b797f63902b971a8c77be6a1d5a6bd396/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/7607e4511fa94a49a2208ddd60957c2e6f260ead/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8db8e3823f37921a2fa6ab084e93eb9879aad7ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/c52157e77a6cfb0e049092bc63eb8ec8a9381bc3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6a6ca45f9121d60b8d893c469e58f3bc33212d35/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/670b6456b1e013d6207aeb30da1ad71603e34857/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9a0c96cb2e74d3a6e692d920c9e03326e77f6429">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7cb03814aeaa8a19888d5097b32e8c84260a1c61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/67b8eab4ec0176b511f22aad0d299917fb2ffe1c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1b12397bc9f342b29d9e9108978828f99a6da579">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_94cc70ad1dde7bbf29de8d9f0874252990361daa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/3385fd34546e3d5195b09e31420307e688a39922/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="252896ce41f2a84a2849e29235e66098be7d12ee">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_71c538c3860b4f03758be36f0cc51039a134ed87/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/12ce24d7ddf42d0fa268e8cd567362b1acff7525/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3c433e48557e476290f45fb6cb568d1a103c9978">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_70b2b2a3affb03aeeab81b30e2dab9d7cdd42e2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/4e5fde7c6365c03c8577197b09d066bf0d41b086/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5753660caa486676aacf05857930d76589a09af9">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f2694d3710cf6f825ddf07761fca63784709b1bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/e747cb15ffb6dfa2572336a5af7fa373ae54eaad/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="55d764fefc3262b18baf0f933fa67c107e40ceab">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eb207a266dd0f79d0ed871edcd107c8a53cb027d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/d0cc4f639a0d64802e7b1821f517c8b9ea6e8878/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="906fdd57c143ec9adc27a76a697fed1c0cfd6348">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_01514c291a2bd37f65a9e237187574033c08669f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/94bb5563780c18016945fcc3f1de41075f549005/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c541ff2bcee73a761bb35a8bb6bad7960ce51709/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/99d26a494f18b090c39135ce09a82cf6965d5ed0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c286f62391d8c4ebd133d4009d15bc8264f8a6d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/936e7c61aaa1d5a528f04993f8759388741cfaeb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="56e96fa067ba358a6c60184e40947810dcd78f30">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce91677caf5e5c88095a41986ede0b4dc5a2436c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/cb38c3fcecd92de4b15e2aee26b0d0cb435e4446/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71af915b7f4f7ec0b5f768b365145bb6a5cb9a66">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_465cfb7c190de7be6067863c953118bf858ff6b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/b26dd633132fa5dec585dffd8469a09214baa4cc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_50cbe6d64413f859265e9127522caab8ff1c8157/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/6ab454264d63e10b931a3fdffe7b523df3d45a1a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b18c853774c25eeaeb3ecf6f171e26f06c4ba66b">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8bc6248a8a301ab829262b73caf01c82e1879c1f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-2.4.0_ecbe2c161176eb992edc97a7cb457783db6aba24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.0.1/e1bb32b12b25e2f78e6786059ca7ea878f8345e0/support-annotations-26.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e1bb32b12b25e2f78e6786059ca7ea878f8345e0">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.1_63ecbd85f180888589f81804051cd1b0d6f0c2a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/9519aa30ad5d348f77977a999c00c47f98d6a033/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8bdf5cd702d3d860cd85783a776c26605f557882">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a02171be67737bf60de18ee740105668befe95c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/e598e3aeb71d1eac8ca891762da319d0c6b8e352/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_91fa327ad6d01163df541a56fb29a8dbdbaa91ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/d9342597341e0bf1075c8e51cf26edafda114d87/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_57a5920fef9d1e2a85c603348f5efb8c0b79c4d2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/9a0d097a18fbdbf41115a58cbbfd5c50cd4e3f98/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_92dd10437e0e01f183f0db34433a42fef63ede97/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/f8a6e6d0a561328ba8318f9ba50df5ae44f28baf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="681eeeaec5300e5257ad9bf889c3859ba3833d5a">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f2197ece2cbf01df23434f0f4c5546b212d2d327/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/e5dcfff6116313c5ddd798c43bfcc12599752ce0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b685077cdb08cf7ae8b61afd1fe910e47d91b9a">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2dc210aecaadd25657665b7873023441d93f859c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/d8d43c94f0fce84b54f8ea3bf086a211ee4ca6f1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0bffdc0bd4f7ca0e27c5bfeef39569f8da00aa26">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_889042280e3bde98a3023c8e510bb0e2a198a897/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_81c0817faabc3a7bf3f6bbc5c999be6fa208e65e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/cd8ef3bc9e10adba8c3842d77358782516bc8a8a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b5b6af36bacf1d812cd3dc45f9dcab9ea471ed91">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cf81305965f7913c0d9a6e0f655bc198d0272827/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/efed1e047e18ae9ba09fc6863c0a9f94b9f7ba87/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1f257478030cb1f0f04809b8cf8d63c48b651cbc">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_34adb08aefcc5c00be96ec5c25f2f6f5bce6a506/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/9fc959752da21061c576c49d9e881a302d7119b5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e72a518413b68aa111650f252ed49028d2f3c75f">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0a738785f0afe1983140e088f7a8764203491fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0-alpha8/a90cf14b188c4223c980c83784335e30d3bb89f4/common-1.0.0-alpha8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a90cf14b188c4223c980c83784335e30d3bb89f4">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0-alpha8_fcf99ddc46b830a515e95738b90f39fe67f3bd77/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a0baae1482d37b6855a649df9c850e1b4032c1df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/941460d686f62e144b21d1c9949f02b2a0fad35c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8dc80d84113ed9561c7659fb76cc023c52d07ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/2eb629dbef5fba26a1106e17035e94e33de349af/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7620e02e06275ebb17335bcc27a291bed40609c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/f4cf9c4c32bfb1f1e3c3729f08af673d9bca98a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38cbea06a82d3b0db4214dc3cc0fdd7940c8abe7">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_390c97c841bb9b74e8d556b200078c304710ec7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/89c026431f2080a9804e07d12c3e476ae758f309/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3ac08c35419ab7cf9146969de471768dbe502f0f">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c7a9f133a596bfe6b82f0dab0f18dc82ddfc8bf3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/74dcf16cb01396c4b27adc9ce0f0f96168b2b79e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="288913b440a3c61c30aa171095453a605432277a">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ef8f2a2aed6cf69005e1427372aeaf1afe8f814/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/7ae5510fde87e3c095e4910711ace422754b5f1c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8390744cbcb51d3c9459c67d5adc393503a1ed7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/105ee21c85cc9335a3ad5c3c4134687cbc16aa00/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="22c673e65215e0764add61e3102946de895439e4">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c87e72caf2cb0bdd0ea0c55ccfb57149c67b4e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_69546c0c76475f9d3dbf2df3461165eb9ae22366/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/784d4156560fbeeff35d5dbcf5ca91f7e36114dd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="10c32fcf3d0acc4b208fc39f8d2e16b69ef8bd3b">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cf853bd01bcbc495e4c43ed6e35afe7f992598a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0-alpha8/eca55e2b62e608e3656425ef08e814b4afd8fc9d/common-1.0.0-alpha8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eca55e2b62e608e3656425ef08e814b4afd8fc9d">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0-alpha8_6abd53d112e86c465a6c508a5980f1e068304c18/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/b88e06a40d931cad0d46cb8281d027910008f152/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c390af22079a61fdc42712c19f15a700f1fc2cbf">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_04a9f6cc725c174e084e1f276f0618fe5ec026e5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/d59cdd185cced07441c3ae737f02e4fc0ab99153/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="083e7bc5a9d9404b49b8f34e5091532361fa28e6">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e858e980f69c2fd041bfbf659ee99f09a5cecf9d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/66e38d5580b00bf2c70d8562a0b78bb85a07aff0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc9ea2bc291bbebc83f5b160d115c699bddc4e16">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ac6c2ff2493a6bfe1d0661c48243677eecfdf9af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/a0d9b70ff60df86da3dbbf775c26db03b6ff7aa9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="60182b96dcbd95dc33dd734bc81505d2b5ddc70e">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2e4f8bdee3fb0403fa6162c5284d53e4525c741a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.3.0_ba77b1be3640c6a8f6f9749bd3630839a8242e88/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/681f0ee1ba273fb284e39e8dfd13c524a363fa2d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ef343ad6f2649e0c13bd0f937b13d1af7a3fa612/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbad46ecff64d2c4a06e42bc7a1f998e2f5b296e">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_78c1ef0c637b25607d4e52600e35fb6ea3ac5b95/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/581e7c13639e47f0250cc9d04990404f328e64fc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7424f816f538c2acfba6169b25e297ea22afbd8">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_255585f7b8b8c9a0a97c8e930e24661b7ec52654/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/747165022c084e7c0ae4ebab599b6878cbe01ce3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d095503f29a8dedc55b9326ed97a5902a1527ab9">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a5221b969ec6ab4f13204917094801cc319ed84d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/67682689af10839f9ec80f868b7ca4e3dcd50291/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dff4d8f88fe2c0e57306e6981fd9b90caeead7e3">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_36faf7b1b8b4337284f818fa300dce3b344cfbe4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/john/.android/build-cache/bb5c29e80d1219a03dfb728a768051b665dd384e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7c24e2e9773fb498e390ce973db382c3ddcf748e">
+        <dex dex="/home/john/ensardz/android-studio/yupivoy/YupivoyV1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1fad0e8bf15409fbe121726122c89c4ebb2e802/classes.dex" />
+    </item>
+
+</items>

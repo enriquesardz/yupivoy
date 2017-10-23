@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-3.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/e747cb15ffb6dfa2572336a5af7fa373ae54eaad/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/e747cb15ffb6dfa2572336a5af7fa373ae54eaad/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.code-troopers.betterpickers/library/3.1.0/e02635a12a96075d98d213dc389b529598b07866/library-3.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

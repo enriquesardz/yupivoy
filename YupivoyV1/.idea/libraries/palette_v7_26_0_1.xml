@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="palette-v7-26.0.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/9fc959752da21061c576c49d9e881a302d7119b5/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/9fc959752da21061c576c49d9e881a302d7119b5/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/palette-v7/26.0.1/125167165af4a6b69fe68b4b65fdbaf9cd8dd304/palette-v7-26.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

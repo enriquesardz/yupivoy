@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="material-spinner-1.1.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/a0d9b70ff60df86da3dbbf775c26db03b6ff7aa9/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/a0d9b70ff60df86da3dbbf775c26db03b6ff7aa9/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/material-spinner/1.1.0/fa529de10b07309e3026df1fc05dadbc04f15ffc/material-spinner-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
